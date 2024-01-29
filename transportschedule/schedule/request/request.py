@@ -18,7 +18,7 @@ class RequestSchedule:
         to_station,
         date=datetime.datetime.now().isoformat(),
         offset=100,
-        limit=150,
+        limit=500,
     ) -> None:
         self.transport_types: str = transport_types
         self.from_station: int = from_station

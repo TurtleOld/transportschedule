@@ -1,7 +1,5 @@
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 from math import ceil
-import pytz
-from icecream import ic
 
 from transportschedule.schedule.json_parse.json_parser import JsonParser
 
@@ -35,7 +33,9 @@ class Processing:
     def detail_transport(self) -> list:
         segments = self.parser.parse_json(self.json_data, 'segments')
         route_info: list = list()
-        tz = pytz.timezone('Europe/Moscow')
+        utc_offset = timedelta(hours=3)
+        current_time = timezone(utc_offset)
+        current_datetime = datetime.now(current_time)
         for segment in segments:
             departure = self.parser.parse_json(segment, 'departure')
 
@@ -43,7 +43,7 @@ class Processing:
                 departure,
                 '%Y-%m-%dT%H:%M:%S%z',
             )
-            if date.astimezone(tz=tz) > datetime.now(tz=tz):
+            if date > current_datetime:
                 departure_format_date = date.strftime('%d %B %Y %H:%M:%S')
                 number_route = self.parser.parse_json(segment, 'number')
                 thread_route = self.parser.parse_json(segment, 'thread')

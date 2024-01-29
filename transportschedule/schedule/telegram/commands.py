@@ -1,6 +1,3 @@
-import json
-
-from icecream import ic
 from telebot import types
 
 from transportschedule.schedule.process.processing import Processing
@@ -41,10 +38,6 @@ async def callback_handler_bus(call):
         to_station=9742891,
     )
     json_data = request_data.request_transport_between_stations()
-    # with open('schedule/tests/test_data/request.json', 'r') as file:
-    #     data = file.read()
-    #     json_data = json.loads(data)
-
     process = Processing(json_data)
     process_result = process.detail_transport()
     await selected_route(call.message, process_result[:5])
