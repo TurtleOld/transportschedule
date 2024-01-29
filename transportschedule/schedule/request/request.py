@@ -16,16 +16,18 @@ class RequestSchedule:
         transport_types,
         from_station,
         to_station,
-        date=datetime.datetime.today(),
-        offset=0,
+        date=datetime.datetime.now().isoformat(),
+        offset=100,
+        limit=150,
     ) -> None:
         self.transport_types: str = transport_types
         self.from_station: int = from_station
         self.to_station: int = to_station
-        self.date: datetime.datetime = date
+        self.date: str = date
         self.api_key: str = os.environ.get('YANDEX_API_KEY')
         self.url: str = 'https://api.rasp.yandex.net/v3.0/search/'
         self.offset = offset
+        self.limit = limit
 
     def request_transport_between_stations(self) -> dict:
         params: dict = {
@@ -35,6 +37,7 @@ class RequestSchedule:
             'to': f's{self.to_station}',
             'date': self.date,
             'offset': self.offset,
+            'limit': self.limit,
         }
         request: Response = requests.get(self.url, params=params)
         return request.json()
