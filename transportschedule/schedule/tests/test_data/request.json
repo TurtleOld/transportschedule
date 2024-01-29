@@ -1,0 +1,5160 @@
+{
+   "interval_segments":[
+
+   ],
+   "pagination":{
+      "limit":100,
+      "offset":0,
+      "total":303
+   },
+   "search":{
+      "date":"2024-01-28",
+      "from":{
+         "code":"s9742908",
+         "popular_title":"",
+         "short_title":"",
+         "station_type":"bus_station",
+         "station_type_name":"автовокзал",
+         "title":"Сергиев Посад",
+         "transport_type":"bus",
+         "type":"station"
+      },
+      "to":{
+         "code":"s9742891",
+         "popular_title":"none",
+         "short_title":"none",
+         "station_type":"bus_stop",
+         "station_type_name":"автобусная остановка",
+         "title":"Северный посёлок",
+         "transport_type":"bus",
+         "type":"station"
+      }
+   },
+   "segments":[
+      {
+         "arrival":"2024-01-28T05:12:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T05:00:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"47",
+            "short_title":"Сергиев Посад — Скоропусковский",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=47_22_f9742908t9736029_44",
+            "title":"Сергиев Посад — Скоропусковский",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"47_22_f9742908t9736029_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T05:16:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T05:04:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26к (м/т)",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26k-%2A28mxt%2A29_53_f9742908t9736992_r831_1",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26k-*28mxt*29_53_f9742908t9736992_r831_1",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T05:26:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T05:14:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26к (м/т)",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26k-%2A28mxt%2A29_70_f9742908t9736992_r831_1",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26k-*28mxt*29_70_f9742908t9736992_r831_1",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T05:43:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T05:30:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"23",
+            "short_title":"Сергиев Посад — Пересвет (Рынок)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=23_85_f9742908t9736226_44",
+            "title":"Сергиев Посад — Пересвет (Рынок)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"23_85_f9742908t9736226_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T05:58:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T05:45:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"23",
+            "short_title":"Сергиев Посад — Пересвет (Рынок)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=23_92_f9742908t9736226_44",
+            "title":"Сергиев Посад — Пересвет (Рынок)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"23_92_f9742908t9736226_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T06:01:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T05:49:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26к (м/т)",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26k-%2A28mxt%2A29_17_f9742908t9736992_r831_1",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26k-*28mxt*29_17_f9742908t9736992_r831_1",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T06:08:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T06:00:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":480.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":{
+               "address":"127051, г. Москва, Цветной бульвар, 21, стр. 8",
+               "code":1836,
+               "codes":{
+                  "iata":"none",
+                  "icao":"none",
+                  "sirena":"none"
+               },
+               "contacts":"",
+               "email":"pass@mostransavto.ru",
+               "logo":"https://yastat.net/s3/rasp/media/data/company/logo/mta_logo_c.gif",
+               "logo_svg":"none",
+               "phone":"+7 (495) 650-29-10",
+               "title":"ГУП МО МОСТРАНСАВТО",
+               "url":"https://mostransavto.ru/"
+            },
+            "express_type":"none",
+            "number":"117",
+            "short_title":"Сергиев Посад — Искра",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=117_0_9742908_4",
+            "title":"Сергиев Посад — Искра",
+            "transport_subtype":{
+               "code":"bus",
+               "color":"#ff0000",
+               "title":"Автобус"
+            },
+            "transport_type":"bus",
+            "uid":"117_0_9742908_4",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T06:16:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T06:02:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":840.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"46",
+            "short_title":"Сергиев Посад (Скобяной) — Скоропусковский",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=46_67_f9742913t9736029_44",
+            "title":"Сергиев Посад (Скобяной) — Скоропусковский",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"46_67_f9742913t9736029_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T06:16:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T06:04:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26к (м/т)",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26k-%2A28mxt%2A29_26_f9742908t9736992_r831_1",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26k-*28mxt*29_26_f9742908t9736992_r831_1",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T06:17:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T06:05:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26_20_f9742908t9736992_44",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26_20_f9742908t9736992_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T06:18:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T06:05:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"23",
+            "short_title":"Сергиев Посад — Пересвет (Рынок)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=23_99_f9742908t9736226_44",
+            "title":"Сергиев Посад — Пересвет (Рынок)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"23_99_f9742908t9736226_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T06:24:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T06:12:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"47",
+            "short_title":"Сергиев Посад — Скоропусковский",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=47_23_f9742908t9736029_44",
+            "title":"Сергиев Посад — Скоропусковский",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"47_23_f9742908t9736029_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T06:38:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T06:25:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"23",
+            "short_title":"Сергиев Посад — Пересвет (Рынок)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=23_106_f9742908t9736226_44",
+            "title":"Сергиев Посад — Пересвет (Рынок)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"23_106_f9742908t9736226_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T06:39:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T06:26:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":{
+               "address":"127051, г. Москва, Цветной бульвар, 21, стр. 8",
+               "code":1836,
+               "codes":{
+                  "iata":"none",
+                  "icao":"none",
+                  "sirena":"none"
+               },
+               "contacts":"",
+               "email":"pass@mostransavto.ru",
+               "logo":"https://yastat.net/s3/rasp/media/data/company/logo/mta_logo_c.gif",
+               "logo_svg":"none",
+               "phone":"+7 (495) 650-29-10",
+               "title":"ГУП МО МОСТРАНСАВТО",
+               "url":"https://mostransavto.ru/"
+            },
+            "express_type":"none",
+            "number":"2",
+            "short_title":"Западный посёлок — Южный тупик",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=2_0_9742878_4",
+            "title":"Западный посёлок — Южный тупик",
+            "transport_subtype":{
+               "code":"bus",
+               "color":"#ff0000",
+               "title":"Автобус"
+            },
+            "transport_type":"bus",
+            "uid":"2_0_9742878_4",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T06:46:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T06:34:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26к (м/т)",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26k-%2A28mxt%2A29_22_f9742908t9736992_r831_1",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26k-*28mxt*29_22_f9742908t9736992_r831_1",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T06:47:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T06:35:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26_44_f9742908t9736992_44",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26_44_f9742908t9736992_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T06:58:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T06:45:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"23",
+            "short_title":"Сергиев Посад — Пересвет (Рынок)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=23_112_f9742908t9736226_44",
+            "title":"Сергиев Посад — Пересвет (Рынок)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"23_112_f9742908t9736226_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T07:01:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T06:49:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26к (м/т)",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26k-%2A28mxt%2A29_74_f9742908t9736992_r831_1",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26k-*28mxt*29_74_f9742908t9736992_r831_1",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T07:04:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T06:50:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":840.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"28",
+            "short_title":"Сергиев Посад — Жилгородок",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=28_5_f9742908t9743786_44",
+            "title":"Сергиев Посад — Жилгородок",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"28_5_f9742908t9743786_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T07:14:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T07:01:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"23",
+            "short_title":"Сергиев Посад — Пересвет (Рынок)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=23_118_f9742908t9736226_44",
+            "title":"Сергиев Посад — Пересвет (Рынок)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"23_118_f9742908t9736226_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T07:16:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T07:04:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26к (м/т)",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26k-%2A28mxt%2A29_73_f9742908t9736992_r831_1",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26k-*28mxt*29_73_f9742908t9736992_r831_1",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T07:17:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T07:05:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26_41_f9742908t9736992_44",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26_41_f9742908t9736992_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T07:19:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T07:06:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":{
+               "address":"127051, г. Москва, Цветной бульвар, 21, стр. 8",
+               "code":1836,
+               "codes":{
+                  "iata":"none",
+                  "icao":"none",
+                  "sirena":"none"
+               },
+               "contacts":"",
+               "email":"pass@mostransavto.ru",
+               "logo":"https://yastat.net/s3/rasp/media/data/company/logo/mta_logo_c.gif",
+               "logo_svg":"none",
+               "phone":"+7 (495) 650-29-10",
+               "title":"ГУП МО МОСТРАНСАВТО",
+               "url":"https://mostransavto.ru/"
+            },
+            "express_type":"none",
+            "number":"2",
+            "short_title":"Западный посёлок — Южный тупик",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=2_1_9742878_4",
+            "title":"Западный посёлок — Южный тупик",
+            "transport_subtype":{
+               "code":"bus",
+               "color":"#ff0000",
+               "title":"Автобус"
+            },
+            "transport_type":"bus",
+            "uid":"2_1_9742878_4",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T07:22:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T07:09:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"23",
+            "short_title":"Сергиев Посад — Пересвет (Рынок)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=23_124_f9742908t9736226_44",
+            "title":"Сергиев Посад — Пересвет (Рынок)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"23_124_f9742908t9736226_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T07:26:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T07:14:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26к (м/т)",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26k-%2A28mxt%2A29_67_f9742908t9736992_r831_1",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26k-*28mxt*29_67_f9742908t9736992_r831_1",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T07:30:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T07:17:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"23",
+            "short_title":"Сергиев Посад — Пересвет (Рынок)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=23_86_f9742908t9736226_44",
+            "title":"Сергиев Посад — Пересвет (Рынок)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"23_86_f9742908t9736226_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T07:31:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T07:19:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26к (м/т)",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26k-%2A28mxt%2A29_6_f9742908t9736992_r831_1",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26k-*28mxt*29_6_f9742908t9736992_r831_1",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T07:31:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T07:20:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":660.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"27",
+            "short_title":"Сергиев Посад — Красный Факел",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=27_5_f9742908t9741125_44",
+            "title":"Сергиев Посад — Красный Факел",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"27_5_f9742908t9741125_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T07:38:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T07:25:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"23",
+            "short_title":"Сергиев Посад — Пересвет (Рынок)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=23_93_f9742908t9736226_44",
+            "title":"Сергиев Посад — Пересвет (Рынок)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"23_93_f9742908t9736226_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T07:38:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T07:28:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":600.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":{
+               "address":"",
+               "code":56161,
+               "codes":{
+                  "iata":"none",
+                  "icao":"none",
+                  "sirena":"none"
+               },
+               "contacts":"",
+               "email":"",
+               "logo":"none",
+               "logo_svg":"none",
+               "phone":"",
+               "title":"Частные перевозчики Московской области",
+               "url":""
+            },
+            "express_type":"none",
+            "number":"81 (м/т)",
+            "short_title":"Сергиев Посад — Березняки",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=81-%2A28mxt%2A29_0_9742908_4",
+            "title":"Сергиев Посад — Березняки",
+            "transport_subtype":{
+               "code":"bus",
+               "color":"#ff0000",
+               "title":"Автобус"
+            },
+            "transport_type":"bus",
+            "uid":"81-*28mxt*29_0_9742908_4",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T07:42:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T07:30:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"120",
+            "short_title":"Сергиев Посад — Жуклино (Кольцевая)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=120_6_f9742908t9739877_44",
+            "title":"Сергиев Посад — Жуклино (Кольцевая)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"120_6_f9742908t9739877_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T07:43:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T07:33:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":600.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":{
+               "address":"",
+               "code":56161,
+               "codes":{
+                  "iata":"none",
+                  "icao":"none",
+                  "sirena":"none"
+               },
+               "contacts":"",
+               "email":"",
+               "logo":"none",
+               "logo_svg":"none",
+               "phone":"",
+               "title":"Частные перевозчики Московской области",
+               "url":""
+            },
+            "express_type":"none",
+            "number":"70 (м/т)",
+            "short_title":"Сергиев Посад — Бужаниново",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=70-%2A28mxt%2A29_0_9742908_4",
+            "title":"Сергиев Посад — Бужаниново",
+            "transport_subtype":{
+               "code":"bus",
+               "color":"#ff0000",
+               "title":"Автобус"
+            },
+            "transport_type":"bus",
+            "uid":"70-*28mxt*29_0_9742908_4",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T07:46:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T07:34:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26к (м/т)",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26k-%2A28mxt%2A29_8_f9742908t9736992_r831_1",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26k-*28mxt*29_8_f9742908t9736992_r831_1",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T07:47:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T07:35:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26_34_f9742908t9736992_44",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26_34_f9742908t9736992_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T07:47:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T07:35:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"47",
+            "short_title":"Сергиев Посад — Скоропусковский",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=47_24_f9742908t9736029_44",
+            "title":"Сергиев Посад — Скоропусковский",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"47_24_f9742908t9736029_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T07:48:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T07:35:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"23",
+            "short_title":"Сергиев Посад — Пересвет (Рынок)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=23_149_f9742908t9736226_44",
+            "title":"Сергиев Посад — Пересвет (Рынок)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"23_149_f9742908t9736226_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T07:56:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T07:42:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":840.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"46",
+            "short_title":"Сергиев Посад (Скобяной) — Скоропусковский",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=46_115_f9742913t9736029_44",
+            "title":"Сергиев Посад (Скобяной) — Скоропусковский",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"46_115_f9742913t9736029_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T07:55:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T07:45:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":600.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"50",
+            "short_title":"Сергиев Посад — Братовщина (Поворот)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=50_0_f9742908t9743774_44",
+            "title":"Сергиев Посад — Братовщина (Поворот)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"50_0_f9742908t9743774_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T07:58:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T07:45:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"23",
+            "short_title":"Сергиев Посад — Пересвет (Рынок)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=23_130_f9742908t9736226_44",
+            "title":"Сергиев Посад — Пересвет (Рынок)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"23_130_f9742908t9736226_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T08:01:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T07:49:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26к (м/т)",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26k-%2A28mxt%2A29_15_f9742908t9736992_r831_1",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26k-*28mxt*29_15_f9742908t9736992_r831_1",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T08:06:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T07:52:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":840.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"46",
+            "short_title":"Сергиев Посад (Скобяной) — Скоропусковский",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=46_68_f9742913t9736029_44",
+            "title":"Сергиев Посад (Скобяной) — Скоропусковский",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"46_68_f9742913t9736029_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T08:08:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T07:55:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"23",
+            "short_title":"Сергиев Посад — Пересвет (Рынок)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=23_143_f9742908t9736226_44",
+            "title":"Сергиев Посад — Пересвет (Рынок)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"23_143_f9742908t9736226_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T08:09:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T07:56:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":{
+               "address":"127051, г. Москва, Цветной бульвар, 21, стр. 8",
+               "code":1836,
+               "codes":{
+                  "iata":"none",
+                  "icao":"none",
+                  "sirena":"none"
+               },
+               "contacts":"",
+               "email":"pass@mostransavto.ru",
+               "logo":"https://yastat.net/s3/rasp/media/data/company/logo/mta_logo_c.gif",
+               "logo_svg":"none",
+               "phone":"+7 (495) 650-29-10",
+               "title":"ГУП МО МОСТРАНСАВТО",
+               "url":"https://mostransavto.ru/"
+            },
+            "express_type":"none",
+            "number":"2",
+            "short_title":"Западный посёлок — Южный тупик",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=2_2_9742878_4",
+            "title":"Западный посёлок — Южный тупик",
+            "transport_subtype":{
+               "code":"bus",
+               "color":"#ff0000",
+               "title":"Автобус"
+            },
+            "transport_type":"bus",
+            "uid":"2_2_9742878_4",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T08:16:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T08:04:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26к (м/т)",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26k-%2A28mxt%2A29_86_f9742908t9736992_r831_1",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26k-*28mxt*29_86_f9742908t9736992_r831_1",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T08:17:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T08:05:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26_21_f9742908t9736992_44",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26_21_f9742908t9736992_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T08:18:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T08:05:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"23",
+            "short_title":"Сергиев Посад — Пересвет (Рынок)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=23_100_f9742908t9736226_44",
+            "title":"Сергиев Посад — Пересвет (Рынок)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"23_100_f9742908t9736226_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T08:28:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T08:15:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"23",
+            "short_title":"Сергиев Посад — Пересвет (Рынок)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=23_136_f9742908t9736226_44",
+            "title":"Сергиев Посад — Пересвет (Рынок)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"23_136_f9742908t9736226_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T08:29:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T08:15:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":840.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":{
+               "address":"127051, г. Москва, Цветной бульвар, 21, стр. 8",
+               "code":1836,
+               "codes":{
+                  "iata":"none",
+                  "icao":"none",
+                  "sirena":"none"
+               },
+               "contacts":"",
+               "email":"pass@mostransavto.ru",
+               "logo":"https://yastat.net/s3/rasp/media/data/company/logo/mta_logo_c.gif",
+               "logo_svg":"none",
+               "phone":"+7 (495) 650-29-10",
+               "title":"ГУП МО МОСТРАНСАВТО",
+               "url":"https://mostransavto.ru/"
+            },
+            "express_type":"none",
+            "number":"28",
+            "short_title":"Сергиев Посад — Взгляднево",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=28_0_9742908_4",
+            "title":"Сергиев Посад — Взгляднево",
+            "transport_subtype":{
+               "code":"bus",
+               "color":"#ff0000",
+               "title":"Автобус"
+            },
+            "transport_type":"bus",
+            "uid":"28_0_9742908_4",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T08:31:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T08:19:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26к (м/т)",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26k-%2A28mxt%2A29_34_f9742908t9736992_r831_1",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26k-*28mxt*29_34_f9742908t9736992_r831_1",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T08:34:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T08:21:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":{
+               "address":"127051, г. Москва, Цветной бульвар, 21, стр. 8",
+               "code":1836,
+               "codes":{
+                  "iata":"none",
+                  "icao":"none",
+                  "sirena":"none"
+               },
+               "contacts":"",
+               "email":"pass@mostransavto.ru",
+               "logo":"https://yastat.net/s3/rasp/media/data/company/logo/mta_logo_c.gif",
+               "logo_svg":"none",
+               "phone":"+7 (495) 650-29-10",
+               "title":"ГУП МО МОСТРАНСАВТО",
+               "url":"https://mostransavto.ru/"
+            },
+            "express_type":"none",
+            "number":"2",
+            "short_title":"Западный посёлок — Южный тупик",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=2_3_9742878_4",
+            "title":"Западный посёлок — Южный тупик",
+            "transport_subtype":{
+               "code":"bus",
+               "color":"#ff0000",
+               "title":"Автобус"
+            },
+            "transport_type":"bus",
+            "uid":"2_3_9742878_4",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T08:42:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T08:30:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"47",
+            "short_title":"Сергиев Посад — Скоропусковский",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=47_31_f9742908t9736029_44",
+            "title":"Сергиев Посад — Скоропусковский",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"47_31_f9742908t9736029_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T08:43:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T08:30:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"23",
+            "short_title":"Сергиев Посад — Пересвет (Рынок)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=23_107_f9742908t9736226_44",
+            "title":"Сергиев Посад — Пересвет (Рынок)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"23_107_f9742908t9736226_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T08:46:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T08:34:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26к (м/т)",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26k-%2A28mxt%2A29_49_f9742908t9736992_r831_1",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26k-*28mxt*29_49_f9742908t9736992_r831_1",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T08:47:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T08:35:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26_45_f9742908t9736992_44",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26_45_f9742908t9736992_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T08:51:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T08:37:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":840.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"46",
+            "short_title":"Сергиев Посад (Скобяной) — Скоропусковский",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=46_80_f9742913t9736029_44",
+            "title":"Сергиев Посад (Скобяной) — Скоропусковский",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"46_80_f9742913t9736029_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T08:50:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T08:40:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":600.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":{
+               "address":"",
+               "code":56161,
+               "codes":{
+                  "iata":"none",
+                  "icao":"none",
+                  "sirena":"none"
+               },
+               "contacts":"",
+               "email":"",
+               "logo":"none",
+               "logo_svg":"none",
+               "phone":"",
+               "title":"Частные перевозчики Московской области",
+               "url":""
+            },
+            "express_type":"none",
+            "number":"81 (м/т)",
+            "short_title":"Сергиев Посад — Березняки",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=81-%2A28mxt%2A29_1_9742908_4",
+            "title":"Сергиев Посад — Березняки",
+            "transport_subtype":{
+               "code":"bus",
+               "color":"#ff0000",
+               "title":"Автобус"
+            },
+            "transport_type":"bus",
+            "uid":"81-*28mxt*29_1_9742908_4",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T08:58:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T08:45:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"23",
+            "short_title":"Сергиев Посад — Пересвет (Рынок)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=23_163_f9742908t9736226_44",
+            "title":"Сергиев Посад — Пересвет (Рынок)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"23_163_f9742908t9736226_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T09:01:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T08:49:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26к (м/т)",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26k-%2A28mxt%2A29_35_f9742908t9736992_r831_1",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26k-*28mxt*29_35_f9742908t9736992_r831_1",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T09:08:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T08:55:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"23",
+            "short_title":"Сергиев Посад — Пересвет (Рынок)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=23_119_f9742908t9736226_44",
+            "title":"Сергиев Посад — Пересвет (Рынок)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"23_119_f9742908t9736226_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T09:14:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T09:00:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":840.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"119",
+            "short_title":"Сергиев Посад — Переславль-Залесский",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=119_0_f9742908t9600344_44",
+            "title":"Сергиев Посад — Переславль-Залесский",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"119_0_f9742908t9600344_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T09:16:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T09:04:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26к (м/т)",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26k-%2A28mxt%2A29_51_f9742908t9736992_r831_1",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26k-*28mxt*29_51_f9742908t9736992_r831_1",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T09:18:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T09:05:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"23",
+            "short_title":"Сергиев Посад — Пересвет (Рынок)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=23_125_f9742908t9736226_44",
+            "title":"Сергиев Посад — Пересвет (Рынок)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"23_125_f9742908t9736226_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T09:25:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T09:10:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":900.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"28",
+            "short_title":"Сергиев Посад — Жилгородок",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=28_6_f9742908t9743786_44",
+            "title":"Сергиев Посад — Жилгородок",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"28_6_f9742908t9743786_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T09:22:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T09:12:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":600.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":{
+               "address":"",
+               "code":56161,
+               "codes":{
+                  "iata":"none",
+                  "icao":"none",
+                  "sirena":"none"
+               },
+               "contacts":"",
+               "email":"",
+               "logo":"none",
+               "logo_svg":"none",
+               "phone":"",
+               "title":"Частные перевозчики Московской области",
+               "url":""
+            },
+            "express_type":"none",
+            "number":"70 (м/т)",
+            "short_title":"Сергиев Посад — Бужаниново",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=70-%2A28mxt%2A29_1_9742908_4",
+            "title":"Сергиев Посад — Бужаниново",
+            "transport_subtype":{
+               "code":"bus",
+               "color":"#ff0000",
+               "title":"Автобус"
+            },
+            "transport_type":"bus",
+            "uid":"70-*28mxt*29_1_9742908_4",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T09:28:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T09:15:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"23",
+            "short_title":"Сергиев Посад — Пересвет (Рынок)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=23_156_f9742908t9736226_44",
+            "title":"Сергиев Посад — Пересвет (Рынок)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"23_156_f9742908t9736226_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T09:31:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T09:19:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26к (м/т)",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26k-%2A28mxt%2A29_3_f9742908t9736992_r831_1",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26k-*28mxt*29_3_f9742908t9736992_r831_1",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T09:36:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T09:22:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":840.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"46",
+            "short_title":"Сергиев Посад (Скобяной) — Скоропусковский",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=46_129_f9742913t9736029_44",
+            "title":"Сергиев Посад (Скобяной) — Скоропусковский",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"46_129_f9742913t9736029_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T09:39:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T09:26:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":{
+               "address":"127051, г. Москва, Цветной бульвар, 21, стр. 8",
+               "code":1836,
+               "codes":{
+                  "iata":"none",
+                  "icao":"none",
+                  "sirena":"none"
+               },
+               "contacts":"",
+               "email":"pass@mostransavto.ru",
+               "logo":"https://yastat.net/s3/rasp/media/data/company/logo/mta_logo_c.gif",
+               "logo_svg":"none",
+               "phone":"+7 (495) 650-29-10",
+               "title":"ГУП МО МОСТРАНСАВТО",
+               "url":"https://mostransavto.ru/"
+            },
+            "express_type":"none",
+            "number":"2",
+            "short_title":"Западный посёлок — Южный тупик",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=2_4_9742878_4",
+            "title":"Западный посёлок — Южный тупик",
+            "transport_subtype":{
+               "code":"bus",
+               "color":"#ff0000",
+               "title":"Автобус"
+            },
+            "transport_type":"bus",
+            "uid":"2_4_9742878_4",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T09:43:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T09:30:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"23",
+            "short_title":"Сергиев Посад — Пересвет (Рынок)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=23_150_f9742908t9736226_44",
+            "title":"Сергиев Посад — Пересвет (Рынок)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"23_150_f9742908t9736226_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T09:46:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T09:34:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26к (м/т)",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26k-%2A28mxt%2A29_31_f9742908t9736992_r831_1",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26k-*28mxt*29_31_f9742908t9736992_r831_1",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T09:47:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T09:35:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26_35_f9742908t9736992_44",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26_35_f9742908t9736992_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T09:58:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T09:45:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"23",
+            "short_title":"Сергиев Посад — Пересвет (Рынок)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=23_131_f9742908t9736226_44",
+            "title":"Сергиев Посад — Пересвет (Рынок)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"23_131_f9742908t9736226_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T10:01:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T09:49:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26к (м/т)",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26k-%2A28mxt%2A29_58_f9742908t9736992_r831_1",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26k-*28mxt*29_58_f9742908t9736992_r831_1",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T10:02:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T09:50:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"47",
+            "short_title":"Сергиев Посад — Скоропусковский",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=47_32_f9742908t9736029_44",
+            "title":"Сергиев Посад — Скоропусковский",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"47_32_f9742908t9736029_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T10:08:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T09:55:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"23",
+            "short_title":"Сергиев Посад — Пересвет (Рынок)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=23_87_f9742908t9736226_44",
+            "title":"Сергиев Посад — Пересвет (Рынок)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"23_87_f9742908t9736226_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T10:16:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T10:04:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26к (м/т)",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26k-%2A28mxt%2A29_37_f9742908t9736992_r831_1",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26k-*28mxt*29_37_f9742908t9736992_r831_1",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T10:18:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T10:05:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"23",
+            "short_title":"Сергиев Посад — Пересвет (Рынок)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=23_94_f9742908t9736226_44",
+            "title":"Сергиев Посад — Пересвет (Рынок)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"23_94_f9742908t9736226_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T10:26:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T10:12:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":840.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"46",
+            "short_title":"Сергиев Посад (Скобяной) — Скоропусковский",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=46_109_f9742913t9736029_44",
+            "title":"Сергиев Посад (Скобяной) — Скоропусковский",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"46_109_f9742913t9736029_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T10:29:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T10:16:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":{
+               "address":"127051, г. Москва, Цветной бульвар, 21, стр. 8",
+               "code":1836,
+               "codes":{
+                  "iata":"none",
+                  "icao":"none",
+                  "sirena":"none"
+               },
+               "contacts":"",
+               "email":"pass@mostransavto.ru",
+               "logo":"https://yastat.net/s3/rasp/media/data/company/logo/mta_logo_c.gif",
+               "logo_svg":"none",
+               "phone":"+7 (495) 650-29-10",
+               "title":"ГУП МО МОСТРАНСАВТО",
+               "url":"https://mostransavto.ru/"
+            },
+            "express_type":"none",
+            "number":"2",
+            "short_title":"Западный посёлок — Южный тупик",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=2_5_9742878_4",
+            "title":"Западный посёлок — Южный тупик",
+            "transport_subtype":{
+               "code":"bus",
+               "color":"#ff0000",
+               "title":"Автобус"
+            },
+            "transport_type":"bus",
+            "uid":"2_5_9742878_4",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T10:31:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T10:19:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26к (м/т)",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26k-%2A28mxt%2A29_83_f9742908t9736992_r831_1",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26k-*28mxt*29_83_f9742908t9736992_r831_1",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T10:33:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T10:20:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"23",
+            "short_title":"Сергиев Посад — Пересвет (Рынок)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=23_137_f9742908t9736226_44",
+            "title":"Сергиев Посад — Пересвет (Рынок)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"23_137_f9742908t9736226_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T10:35:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T10:25:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":600.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":{
+               "address":"",
+               "code":56161,
+               "codes":{
+                  "iata":"none",
+                  "icao":"none",
+                  "sirena":"none"
+               },
+               "contacts":"",
+               "email":"",
+               "logo":"none",
+               "logo_svg":"none",
+               "phone":"",
+               "title":"Частные перевозчики Московской области",
+               "url":""
+            },
+            "express_type":"none",
+            "number":"81 (м/т)",
+            "short_title":"Сергиев Посад — Березняки",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=81-%2A28mxt%2A29_2_9742908_4",
+            "title":"Сергиев Посад — Березняки",
+            "transport_subtype":{
+               "code":"bus",
+               "color":"#ff0000",
+               "title":"Автобус"
+            },
+            "transport_type":"bus",
+            "uid":"81-*28mxt*29_2_9742908_4",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T10:41:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T10:30:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":660.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"27",
+            "short_title":"Сергиев Посад — Красный Факел",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=27_6_f9742908t9741125_44",
+            "title":"Сергиев Посад — Красный Факел",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"27_6_f9742908t9741125_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T10:44:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T10:30:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":840.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":{
+               "address":"127051, г. Москва, Цветной бульвар, 21, стр. 8",
+               "code":1836,
+               "codes":{
+                  "iata":"none",
+                  "icao":"none",
+                  "sirena":"none"
+               },
+               "contacts":"",
+               "email":"pass@mostransavto.ru",
+               "logo":"https://yastat.net/s3/rasp/media/data/company/logo/mta_logo_c.gif",
+               "logo_svg":"none",
+               "phone":"+7 (495) 650-29-10",
+               "title":"ГУП МО МОСТРАНСАВТО",
+               "url":"https://mostransavto.ru/"
+            },
+            "express_type":"none",
+            "number":"28",
+            "short_title":"Сергиев Посад — Взгляднево",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=28_1_9742908_4",
+            "title":"Сергиев Посад — Взгляднево",
+            "transport_subtype":{
+               "code":"bus",
+               "color":"#ff0000",
+               "title":"Автобус"
+            },
+            "transport_type":"bus",
+            "uid":"28_1_9742908_4",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T10:46:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T10:32:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":840.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"46",
+            "short_title":"Сергиев Посад (Скобяной) — Скоропусковский",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=46_119_f9742913t9736029_44",
+            "title":"Сергиев Посад (Скобяной) — Скоропусковский",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"46_119_f9742913t9736029_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T10:46:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T10:34:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26к (м/т)",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26k-%2A28mxt%2A29_88_f9742908t9736992_r831_1",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26k-*28mxt*29_88_f9742908t9736992_r831_1",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T10:48:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T10:35:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"23",
+            "short_title":"Сергиев Посад — Пересвет (Рынок)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=23_101_f9742908t9736226_44",
+            "title":"Сергиев Посад — Пересвет (Рынок)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"23_101_f9742908t9736226_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T10:57:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T10:45:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"47",
+            "short_title":"Сергиев Посад — Скоропусковский",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=47_25_f9742908t9736029_44",
+            "title":"Сергиев Посад — Скоропусковский",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"47_25_f9742908t9736029_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T10:58:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T10:45:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"23",
+            "short_title":"Сергиев Посад — Пересвет (Рынок)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=23_113_f9742908t9736226_44",
+            "title":"Сергиев Посад — Пересвет (Рынок)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"23_113_f9742908t9736226_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T11:01:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T10:49:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26к (м/т)",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26k-%2A28mxt%2A29_38_f9742908t9736992_r831_1",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26k-*28mxt*29_38_f9742908t9736992_r831_1",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T11:06:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T10:52:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":840.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"46",
+            "short_title":"Сергиев Посад (Скобяной) — Скоропусковский",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=46_98_f9742913t9736029_44",
+            "title":"Сергиев Посад (Скобяной) — Скоропусковский",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"46_98_f9742913t9736029_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T11:08:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T10:55:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"23",
+            "short_title":"Сергиев Посад — Пересвет (Рынок)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=23_108_f9742908t9736226_44",
+            "title":"Сергиев Посад — Пересвет (Рынок)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"23_108_f9742908t9736226_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T11:16:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T11:04:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26к (м/т)",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26k-%2A28mxt%2A29_14_f9742908t9736992_r831_1",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26k-*28mxt*29_14_f9742908t9736992_r831_1",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T11:17:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T11:05:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26_22_f9742908t9736992_44",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26_22_f9742908t9736992_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T11:17:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T11:05:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"47",
+            "short_title":"Сергиев Посад — Скоропусковский",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=47_33_f9742908t9736029_44",
+            "title":"Сергиев Посад — Скоропусковский",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"47_33_f9742908t9736029_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T11:23:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T11:10:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":780.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"23",
+            "short_title":"Сергиев Посад — Пересвет (Рынок)",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=23_157_f9742908t9736226_44",
+            "title":"Сергиев Посад — Пересвет (Рынок)",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"23_157_f9742908t9736226_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T11:26:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T11:12:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":840.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"46",
+            "short_title":"Сергиев Посад (Скобяной) — Скоропусковский",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=46_124_f9742913t9736029_44",
+            "title":"Сергиев Посад (Скобяной) — Скоропусковский",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"46_124_f9742913t9736029_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T11:23:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T11:13:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":600.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":{
+               "address":"",
+               "code":56161,
+               "codes":{
+                  "iata":"none",
+                  "icao":"none",
+                  "sirena":"none"
+               },
+               "contacts":"",
+               "email":"",
+               "logo":"none",
+               "logo_svg":"none",
+               "phone":"",
+               "title":"Частные перевозчики Московской области",
+               "url":""
+            },
+            "express_type":"none",
+            "number":"70 (м/т)",
+            "short_title":"Сергиев Посад — Бужаниново",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=70-%2A28mxt%2A29_3_9742908_4",
+            "title":"Сергиев Посад — Бужаниново",
+            "transport_subtype":{
+               "code":"bus",
+               "color":"#ff0000",
+               "title":"Автобус"
+            },
+            "transport_type":"bus",
+            "uid":"70-*28mxt*29_3_9742908_4",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T11:31:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T11:19:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":720.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"26к (м/т)",
+            "short_title":"Сергиев Посад — Краснозаводск",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=26k-%2A28mxt%2A29_55_f9742908t9736992_r831_1",
+            "title":"Сергиев Посад — Краснозаводск",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"26k-*28mxt*29_55_f9742908t9736992_r831_1",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      },
+      {
+         "arrival":"2024-01-28T11:36:00+03:00",
+         "arrival_platform":"",
+         "arrival_terminal":"none",
+         "departure":"2024-01-28T11:22:00+03:00",
+         "departure_platform":"",
+         "departure_terminal":"none",
+         "duration":840.0,
+         "from":{
+            "code":"s9742908",
+            "popular_title":"",
+            "short_title":"",
+            "station_type":"bus_station",
+            "station_type_name":"автовокзал",
+            "title":"Сергиев Посад",
+            "transport_type":"bus",
+            "type":"station"
+         },
+         "has_transfers":"False",
+         "start_date":"2024-01-28",
+         "stops":"",
+         "thread":{
+            "carrier":"none",
+            "express_type":"none",
+            "number":"46",
+            "short_title":"Сергиев Посад (Скобяной) — Скоропусковский",
+            "thread_method_link":"api.rasp.yandex.net/v3/thread/?date=2024-01-28&uid=46_130_f9742913t9736029_44",
+            "title":"Сергиев Посад (Скобяной) — Скоропусковский",
+            "transport_subtype":{
+               "code":"none",
+               "color":"none",
+               "title":"none"
+            },
+            "transport_type":"bus",
+            "uid":"46_130_f9742913t9736029_44",
+            "vehicle":"none"
+         },
+         "tickets_info":"none",
+         "to":{
+            "code":"s9742891",
+            "popular_title":"none",
+            "short_title":"none",
+            "station_type":"bus_stop",
+            "station_type_name":"автобусная остановка",
+            "title":"Северный посёлок",
+            "transport_type":"bus",
+            "type":"station"
+         }
+      }
+   ]
+}

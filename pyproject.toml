@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "transportschedule"
+version = "0.1.0"
+description = ""
+authors = ["TurtleOld <dev@pavlovteam.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.31.0"
+pytelegrambotapi = "^4.15.3"
+python-dotenv = "^1.0.1"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.8.0"
+black = "^24.1.1"
+icecream = "^2.1.3"
+pytest = "^8.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+transport = "transportschedule.engine:main"
