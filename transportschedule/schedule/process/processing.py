@@ -1,7 +1,13 @@
 from datetime import datetime, timezone, timedelta
 from math import ceil
-
 from transportschedule.schedule.json_parse.json_parser import JsonParser
+
+
+def convert_time(seconds: float):
+    minutes = seconds // 60
+    if minutes >= 60:
+        return f'{int(minutes // 60)} час {int(minutes % 60)} мин.'
+    return f'{int(minutes)} мин.'
 
 
 class Processing:
@@ -44,18 +50,22 @@ class Processing:
                 '%Y-%m-%dT%H:%M:%S%z',
             )
             if date > current_datetime:
-                departure_format_date = date.strftime('%d %B %Y %H:%M:%S')
+                departure_format_date = date.strftime('%H:%M')
                 number_route = self.parser.parse_json(segment, 'number')
                 thread_route = self.parser.parse_json(segment, 'thread')
+                duration = convert_time(
+                    self.parser.parse_json(segment, 'duration'),
+                )
                 short_title_route = self.parser.parse_json(
                     thread_route,
                     'short_title',
                 )
                 route_info.append(
-                    '{0} | {1} {2}'.format(
+                    '\u00A0\u00A0#{1} | {0} ({3}) | {2}\u00A0\u00A0'.format(
                         departure_format_date,
                         number_route,
                         short_title_route,
+                        duration,
                     )
                 )
         return route_info
