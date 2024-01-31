@@ -1,3 +1,4 @@
+from icecream import ic
 from telebot import types
 
 from transportschedule.schedule.process.processing import Processing
@@ -70,6 +71,116 @@ async def handler_request_transport(call):
             to_station=9601389,
         )
         return request_data.request_transport_between_stations()
+    elif call.data == 'sergiev_posad_yaroslavsky_railway_station':
+        await bot.send_message(
+            call.message.chat.id,
+            'Выбран маршрут: От Сергиев Посада до Ярославского вокзала',
+        )
+        request_data = RequestSchedule(
+            transport_types='suburban',
+            from_station=9601389,
+            to_station=2000002,
+        )
+        return request_data.request_transport_between_stations()
+    elif call.data == 'yaroslavsky_railway_station_podlipki':
+        await bot.send_message(
+            call.message.chat.id,
+            'Выбран маршрут: От Ярославского вокзала до Подлипки-Дачные',
+        )
+        request_data = RequestSchedule(
+            transport_types='suburban',
+            from_station=2000002,
+            to_station=9600691,
+        )
+        return request_data.request_transport_between_stations()
+    elif call.data == 'podlipki_yaroslavsky_railway_station':
+        await bot.send_message(
+            call.message.chat.id,
+            'Выбран маршрут: От Подлипки-Дачные до Ярославского вокзала',
+        )
+        request_data = RequestSchedule(
+            transport_types='suburban',
+            from_station=9600691,
+            to_station=2000002,
+        )
+        return request_data.request_transport_between_stations()
+    elif call.data == 'podlipki_mytischi':
+        await bot.send_message(
+            call.message.chat.id,
+            'Выбран маршрут: От Подлипки-Дачные до Мытищи',
+        )
+        request_data = RequestSchedule(
+            transport_types='suburban',
+            from_station=9600691,
+            to_station=9600681,
+        )
+        return request_data.request_transport_between_stations()
+    elif call.data == 'mytischi_podlipki':
+        await bot.send_message(
+            call.message.chat.id,
+            'Выбран маршрут: От Мытищи до Подлипки-Дачные',
+        )
+        request_data = RequestSchedule(
+            transport_types='suburban',
+            from_station=9600681,
+            to_station=9600691,
+        )
+        return request_data.request_transport_between_stations()
+    elif call.data == 'yaroslavsky_railway_station_mytischi':
+        await bot.send_message(
+            call.message.chat.id,
+            'Выбран маршрут: От Ярославского вокзала до Мытищи',
+        )
+        request_data = RequestSchedule(
+            transport_types='suburban',
+            from_station=2000002,
+            to_station=9600681,
+        )
+        return request_data.request_transport_between_stations()
+    elif call.data == 'sergiev_posad_mytischi':
+        await bot.send_message(
+            call.message.chat.id,
+            'Выбран маршрут: От Сергиев Посада до Мытищи',
+        )
+        request_data = RequestSchedule(
+            transport_types='suburban',
+            from_station=9601389,
+            to_station=9600681,
+        )
+        return request_data.request_transport_between_stations()
+    elif call.data == 'mytischi_sergiev_posad':
+        await bot.send_message(
+            call.message.chat.id,
+            'Выбран маршрут: От Мытищи до Сергиев Посада',
+        )
+        request_data = RequestSchedule(
+            transport_types='suburban',
+            from_station=9600681,
+            to_station=9601389,
+        )
+        return request_data.request_transport_between_stations()
+    elif call.data == 'black_serp_molot':
+        await bot.send_message(
+            call.message.chat.id,
+            'Выбран маршрут: От Чёрное до Серп и Молот',
+        )
+        request_data = RequestSchedule(
+            transport_types='suburban',
+            from_station=9601301,
+            to_station=9601796,
+        )
+        return request_data.request_transport_between_stations()
+    elif call.data == 'serp_molot_black':
+        await bot.send_message(
+            call.message.chat.id,
+            'Выбран маршрут: От Серп и Молот до Чёрное',
+        )
+        request_data = RequestSchedule(
+            transport_types='suburban',
+            from_station=9601796,
+            to_station=9601301,
+        )
+        return request_data.request_transport_between_stations()
 
 
 @bot.callback_query_handler(func=lambda call: True)
@@ -77,28 +188,8 @@ async def callback_handler_bus_route(call):
     await bot.delete_message(call.message.chat.id, call.message.id)
     json_data = await handler_request_transport(call)
     process = Processing(json_data)
-    process_result = process.detail_transport()
-    await selected_route(call.message, process_result[:5])
-
-
-# @bot.callback_query_handler(
-#     func=lambda call: call.data == 'yaroslavsky_railway_station_sergiev_posad'
-# )
-# async def callback_handler_suburban(call):
-#     await bot.delete_message(call.message.chat.id, call.message.id)
-#     await bot.send_message(
-#         call.message.chat.id,
-#         'Выбран маршрут: От Ярославского вокзала до Сергиев Посада',
-#     )
-#     request_data = RequestSchedule(
-#         transport_types='suburban',
-#         from_station=2000002,
-#         to_station=9601389,
-#     )
-#     json_data = request_data.request_transport_between_stations()
-#     process = Processing(json_data)
-#     process_result = process.detail_transport()
-#     await selected_route(call.message, process_result[:5])
+    route_info, route_detail_info = process.detail_transport()
+    await selected_route(call.message, route_info[:5], route_detail_info[:5])
 
 
 async def start_bot():

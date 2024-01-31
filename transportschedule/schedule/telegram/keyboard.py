@@ -1,3 +1,5 @@
+import datetime
+
 from icecream import ic
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
@@ -41,7 +43,7 @@ async def selected_bus(message):
 
 
 async def selected_suburban(message):
-    keyboard = InlineKeyboardMarkup()
+    keyboard = InlineKeyboardMarkup(row_width=2)
     yaroslavsky_railway_station_sergiev_posad = InlineKeyboardButton(
         '\u00A0\u00A0Ярославкий вокзал - Сергиев Посад\u00A0\u00A0',
         callback_data='yaroslavsky_railway_station_sergiev_posad',
@@ -78,6 +80,11 @@ async def selected_suburban(message):
         callback_data='sergiev_posad_mytischi',
     )
 
+    mytischi_sergiev_posad = InlineKeyboardButton(
+        '\u00A0\u00A0Мытищи - Сергиев Посад\u00A0\u00A0',
+        callback_data='mytischi_sergiev_posad',
+    )
+
     black_serp_molot = InlineKeyboardButton(
         '\u00A0\u00A0Чёрное - Серп и Молот\u00A0\u00A0',
         callback_data='black_serp_molot',
@@ -97,6 +104,7 @@ async def selected_suburban(message):
         mytischi_podlipki,
         yaroslavsky_railway_station_mytischi,
         sergiev_posad_mytischi,
+        mytischi_sergiev_posad,
         black_serp_molot,
         serp_molot_black,
     )
@@ -108,13 +116,14 @@ async def selected_suburban(message):
     )
 
 
-async def selected_route(message, route_info):
+async def selected_route(message, route_info, route_detail_info):
     keyboard = InlineKeyboardMarkup()
-    for route in route_info:
+    for route, detail in zip(route_info, route_detail_info):
+        callback_data = ' '.join(detail.split()[:5])
         keyboard.row(
             InlineKeyboardButton(
                 text=f'\u00A0\u00A0\u00A0{route}\u00A0\u00A0\u00A0',
-                callback_data=' '.join(route.split()[:5]),
+                callback_data=callback_data,
             )
         )
     await bot.send_message(

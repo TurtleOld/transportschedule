@@ -36,9 +36,10 @@ class Processing:
             title_to,
         )
 
-    def detail_transport(self) -> list:
+    def detail_transport(self) -> tuple[list, list]:
         segments = self.parser.parse_json(self.json_data, 'segments')
         route_info: list = list()
+        route_detail_info: list = list()
         utc_offset = timedelta(hours=3)
         current_time = timezone(utc_offset)
         current_datetime = datetime.now(current_time)
@@ -60,6 +61,7 @@ class Processing:
                     thread_route,
                     'short_title',
                 )
+                uid_thread = self.parser.parse_json(thread_route, 'uid')
                 route_info.append(
                     '\u00A0\u00A0#{1} | {0} ({3}) | {2}\u00A0\u00A0'.format(
                         departure_format_date,
@@ -68,4 +70,7 @@ class Processing:
                         duration,
                     )
                 )
-        return route_info
+                route_detail_info.append(
+                    uid_thread,
+                )
+        return route_info, route_detail_info
