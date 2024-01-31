@@ -183,6 +183,21 @@ async def handler_request_transport(call):
         return request_data.request_transport_between_stations()
 
 
+async def handler_thread(call, threads, json_data):
+    process_thread = Processing(json_data)
+    station_info = process_thread.get_transport_route()
+    from_station = station_info[0]
+    to_station = station_info[2]
+    for thread in threads:
+        request = RequestSchedule(
+            uid=thread,
+            from_station=from_station,
+            to_station=to_station,
+        )
+        thread_info = request.request_thread_transport_route()
+
+
+
 @bot.callback_query_handler(func=lambda call: True)
 async def callback_handler_bus_route(call):
     await bot.delete_message(call.message.chat.id, call.message.id)
@@ -190,6 +205,7 @@ async def callback_handler_bus_route(call):
     process = Processing(json_data)
     route_info, route_detail_info = process.detail_transport()
     await selected_route(call.message, route_info[:5], route_detail_info[:5])
+    await handler_thread(call, route_detail_info[:5], json_data)
 
 
 async def start_bot():

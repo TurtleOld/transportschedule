@@ -1,6 +1,10 @@
 from datetime import datetime, timezone, timedelta
 from math import ceil
+
+from icecream import ic
+
 from transportschedule.schedule.json_parse.json_parser import JsonParser
+from transportschedule.schedule.request.request import RequestSchedule
 
 
 def convert_time(seconds: float):
@@ -24,15 +28,15 @@ class Processing:
 
     def get_transport_route(self) -> tuple:
         from_station = self.parser.parse_json(self.json_data, 'from')
+        from_code = self.parser.parse_json(from_station, 'code')
         to_station = self.parser.parse_json(self.json_data, 'to')
-        station_type_name_from = from_station.get('station_type_name')
+        to_code = self.parser.parse_json(to_station, 'code')
         title_from = self.parser.parse_json(from_station, 'title')
-        station_type_name_to = to_station.get('station_type_name')
         title_to = self.parser.parse_json(to_station, 'title')
         return (
-            station_type_name_from,
+            from_code,
             title_from,
-            station_type_name_to,
+            to_code,
             title_to,
         )
 
