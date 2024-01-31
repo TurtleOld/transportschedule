@@ -1,18 +1,8 @@
-import asyncio
-
-import telebot
-from aiohttp import web
-from icecream import ic
 from telebot import types
 
 from transportschedule.schedule.process.processing import Processing
 from transportschedule.schedule.request.request import RequestSchedule
-from transportschedule.schedule.telegram.config import (
-    bot,
-    logger,
-    WEBHOOK_URL_BASE,
-    WEBHOOK_URL_PATH,
-)
+from transportschedule.schedule.telegram.config import bot
 from transportschedule.schedule.telegram.keyboard import (
     select_transport_type,
     selected_bus,
@@ -20,38 +10,6 @@ from transportschedule.schedule.telegram.keyboard import (
     selected_suburban,
     back_main,
 )
-
-
-# Process webhook calls
-async def handle(request):
-    if request.match_info.get('token') == bot.token:
-        request_body_dict = await request.json()
-        update = telebot.types.Update.de_json(request_body_dict)
-        asyncio.ensure_future(bot.process_new_updates([update]))
-        return web.Response()
-    else:
-        return web.Response(status=403)
-
-
-# Remove webhook and closing session before exiting
-async def shutdown(app):
-    logger.info('Shutting down: removing webhook')
-    await bot.remove_webhook()
-    logger.info('Shutting down: closing session')
-    await bot.close_session()
-
-
-async def setup():
-    # Remove webhook, it fails sometimes the set if there is a previous webhook
-    logger.info('Starting up: removing old webhook')
-    await bot.remove_webhook()
-    # Set webhook
-    logger.info('Starting up: setting webhook')
-    await bot.set_webhook(url=WEBHOOK_URL_BASE + WEBHOOK_URL_PATH)
-    app = web.Application()
-    app.router.add_post('/{token}/', handle)
-    app.on_cleanup.append(shutdown)
-    return app
 
 
 @bot.message_handler(commands=['select'])
