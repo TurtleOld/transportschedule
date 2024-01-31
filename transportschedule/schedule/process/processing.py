@@ -78,3 +78,14 @@ class Processing:
                     uid_thread,
                 )
         return route_info, route_detail_info
+
+    def detail_thread(self):
+        ic(self.json_data)
+        number = self.parser.parse_json(self.json_data, 'number')
+        short_title = self.parser.parse_json(self.json_data, 'short_title')
+        days = self.parser.parse_json(self.json_data, 'days')
+        from_station = self.parser.parse_json(self.json_data, 'from')
+        to_station = self.parser.parse_json(self.json_data, 'to')
+        return (
+            '<strong>Электричка:</strong> {} {}\n <strong>График хождения:</strong> {}'
+        ).format(number, short_title, days)

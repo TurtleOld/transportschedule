@@ -131,3 +131,14 @@ async def selected_route(message, route_info, route_detail_info):
         'Маршруты:',
         reply_markup=keyboard,
     )
+
+
+async def back_main(message, threads):
+    keyboard = InlineKeyboardMarkup()
+    keyboard.add(
+        InlineKeyboardButton(
+            text='Вернуться назад',
+            callback_data='back',
+        )
+    )
+    await bot.send_message(message.chat.id, threads, reply_markup=keyboard)
