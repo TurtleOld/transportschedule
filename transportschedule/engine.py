@@ -1,18 +1,30 @@
 import asyncio
 import datetime
 import json
+import os
+import ssl
 
+from aiohttp import web
 from icecream import ic
 
 from transportschedule.schedule.process.processing import Processing
 from transportschedule.schedule.request.request import RequestSchedule
-from transportschedule.schedule.telegram.commands import start_bot
+from transportschedule.schedule.telegram.commands import start_bot, setup
+from transportschedule.schedule.telegram.config import WEBHOOK_LISTEN, WEBHOOK_PORT
 
 
 def main():
     """Engine."""
-
-    asyncio.run(start_bot())
+    if os.getenv('DEBUG'):
+        asyncio.run(start_bot())
+    else:
+        context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
+        web.run_app(
+            setup(),
+            host=WEBHOOK_LISTEN,
+            port=WEBHOOK_PORT,
+            ssl_context=context,
+        )
 
 
 if __name__ == '__main__':
