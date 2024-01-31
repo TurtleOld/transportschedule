@@ -15,7 +15,7 @@ bot = AsyncTeleBot(token, parse_mode='html')
 
 
 WEBHOOK_HOST = os.getenv('WEBHOOK_HOST')
-WEBHOOK_PORT = os.getenv('WEBHOOK_PORT')
+WEBHOOK_PORT = int(os.getenv('WEBHOOK_PORT'))
 WEBHOOK_LISTEN = os.getenv('WEBHOOK_LISTEN')
 WEBHOOK_URL_BASE = "https://{}:{}".format(WEBHOOK_HOST, WEBHOOK_PORT)
 WEBHOOK_URL_PATH = "/{}/".format(token)
