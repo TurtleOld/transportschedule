@@ -3,7 +3,6 @@ import os
 
 import dotenv
 import requests
-from icecream import ic
 from requests import Response
 
 dotenv.load_dotenv()

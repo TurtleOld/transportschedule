@@ -1,8 +1,6 @@
 from datetime import datetime, timezone, timedelta
-from icecream import ic
 
 from transportschedule.schedule.json_parse.json_parser import JsonParser
-from transportschedule.schedule.request.request import RequestSchedule
 
 
 def convert_time(seconds: float):

@@ -1,4 +1,3 @@
-from icecream import ic
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 from transportschedule.schedule.telegram.config import bot

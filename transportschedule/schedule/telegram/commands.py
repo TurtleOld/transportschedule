@@ -1,6 +1,3 @@
-from typing import Final
-
-from icecream import ic
 from telebot import types
 
 from transportschedule import constants
