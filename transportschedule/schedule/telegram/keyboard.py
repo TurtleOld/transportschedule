@@ -32,7 +32,11 @@ async def selected_bus(message):
         '\u00A0\u00A0Северный - Автовокзал\u00A0\u00A0',
         callback_data='north_bus_station',
     )
-    keyboard.add(bus_station_north, north_bus_station)
+    north_zhbi = InlineKeyboardButton(
+        '\u00A0\u00A0Северный - Завод ЖБИ\u00A0\u00A0',
+        callback_data='north_zhbi',
+    )
+    keyboard.add(bus_station_north, north_bus_station, north_zhbi)
     await bot.send_message(
         message.chat.id,
         '\u00A0\u00A0Выбери направление\u00A0\u00A0',
@@ -116,20 +120,26 @@ async def selected_suburban(message):
 
 async def selected_route(message, route_info, route_detail_info):
     keyboard = InlineKeyboardMarkup()
-    for route, detail in zip(route_info, route_detail_info):
-        callback_data = ' '.join(detail.split()[:5])
-        ic(callback_data)
-        keyboard.row(
-            InlineKeyboardButton(
-                text=f'\u00A0\u00A0\u00A0{route}\u00A0\u00A0\u00A0',
-                callback_data=callback_data,
+    if route_info:
+        for route, detail in zip(route_info, route_detail_info):
+            callback_data = 'thread ' + ' '.join(detail.split()[:5])
+            keyboard.row(
+                InlineKeyboardButton(
+                    text=f'\u00A0\u00A0\u00A0{route}\u00A0\u00A0\u00A0',
+                    callback_data=callback_data,
+                )
             )
+        await bot.send_message(
+            message.chat.id,
+            'Маршруты:',
+            reply_markup=keyboard,
         )
-    await bot.send_message(
-        message.chat.id,
-        'Маршруты:',
-        reply_markup=keyboard,
-    )
+    else:
+        await bot.send_message(
+            message.chat.id,
+            'На сегодня нет маршрутов...',
+            reply_markup=keyboard,
+        )
 
 
 async def back_main(message, threads):
