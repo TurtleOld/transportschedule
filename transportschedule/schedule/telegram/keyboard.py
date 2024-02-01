@@ -1,6 +1,3 @@
-import datetime
-
-from icecream import ic
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 from transportschedule.schedule.telegram.config import bot
@@ -137,7 +134,7 @@ async def back_main(message, threads):
     keyboard = InlineKeyboardMarkup()
     keyboard.add(
         InlineKeyboardButton(
-            text='Вернуться назад',
+            text='Вернуться в начало',
             callback_data='back',
         )
     )
