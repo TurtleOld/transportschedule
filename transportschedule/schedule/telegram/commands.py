@@ -1,3 +1,4 @@
+from icecream import ic
 from telebot import types
 
 from transportschedule import constants
@@ -205,11 +206,7 @@ json_data = None
 route_stops = None
 
 
-@bot.callback_query_handler(
-    func=lambda call: '_g24_' not in call.data
-    and 'back' not in call.data
-    and 'f9' not in call.data,
-)
+@bot.callback_query_handler(func=lambda call: True)
 async def callback_handler_bus_route(call):
     global route_detail_info
     global json_data

@@ -1,3 +1,4 @@
+from icecream import ic
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 from transportschedule.schedule.telegram.config import bot
@@ -117,6 +118,7 @@ async def selected_route(message, route_info, route_detail_info):
     keyboard = InlineKeyboardMarkup()
     for route, detail in zip(route_info, route_detail_info):
         callback_data = ' '.join(detail.split()[:5])
+        ic(callback_data)
         keyboard.row(
             InlineKeyboardButton(
                 text=f'\u00A0\u00A0\u00A0{route}\u00A0\u00A0\u00A0',

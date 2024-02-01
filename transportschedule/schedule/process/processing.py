@@ -1,6 +1,4 @@
 from datetime import datetime, timezone, timedelta
-from math import ceil
-
 from icecream import ic
 
 from transportschedule.schedule.json_parse.json_parser import JsonParser
@@ -16,16 +14,11 @@ def convert_time(seconds: float):
 
 class Processing:
     def __init__(self, json_data, route_stops=None):
+        if route_stops is None:
+            route_stops = []
         self.json_data = json_data
         self.parser = JsonParser(self.json_data)
         self.route_stops = set(route_stops)
-
-    def pagination(self):
-        limit = self.parser.parse_json(self.json_data, 'limit')
-        offset = self.parser.parse_json(self.json_data, 'offset')
-        total = self.parser.parse_json(self.json_data, 'total')
-        total_pages = ceil(total / limit)
-        return limit, offset, total, total_pages
 
     def get_transport_route(self) -> tuple:
         from_station = self.parser.parse_json(self.json_data, 'from')
