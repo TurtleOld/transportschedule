@@ -1,3 +1,5 @@
+from typing import Final
+
 from icecream import ic
 from telebot import types
 
@@ -12,6 +14,10 @@ from transportschedule.schedule.telegram.keyboard import (
     selected_suburban,
     back_main,
 )
+
+route_detail_info = None
+json_data = None
+route_stops = None
 
 
 @bot.message_handler(commands=['select'])
@@ -60,6 +66,17 @@ async def handler_request_transport(call):
             transport_types='bus',
             from_station=9742891,
             to_station=9742908,
+        )
+        return request_data.request_transport_between_stations()
+    elif call.data == 'north_zhbi':
+        await bot.send_message(
+            call.message.chat.id,
+            'Выбран маршрут: От Северного посёлка до Завода ЖБИ',
+        )
+        request_data = RequestSchedule(
+            transport_types='bus',
+            from_station=9742891,
+            to_station=9742916,
         )
         return request_data.request_transport_between_stations()
     elif call.data == 'yaroslavsky_railway_station_sergiev_posad':
@@ -201,12 +218,16 @@ async def handler_thread(thread):
     return thread_info
 
 
-route_detail_info = None
-json_data = None
-route_stops = None
+@bot.callback_query_handler(func=lambda call: call.data.startswith('thread'))
+async def route_detail_handler(call):
+    await bot.delete_message(call.message.chat.id, call.message.id)
+    threads = await handler_thread(call.data[7:])
+    await back_main(call.message, threads)
 
 
-@bot.callback_query_handler(func=lambda call: True)
+@bot.callback_query_handler(
+    func=lambda call: call.data and call.data not in 'back',
+)
 async def callback_handler_bus_route(call):
     global route_detail_info
     global json_data
@@ -218,16 +239,7 @@ async def callback_handler_bus_route(call):
     await selected_route(call.message, route_info[:5], route_detail_info[:5])
 
 
-@bot.callback_query_handler(
-    func=lambda call: call.data in route_detail_info[:5],
-)
-async def route_detail_handler(call):
-    await bot.delete_message(call.message.chat.id, call.message.id)
-    threads = await handler_thread(call.data)
-    await back_main(call.message, threads)
-
-
-@bot.callback_query_handler(func=lambda call: call.data == 'back')
+@bot.callback_query_handler(func=lambda call: call.data in 'back')
 async def come_back_main(call):
     await bot.delete_message(call.message.chat.id, call.message.id - 4)
     await bot.delete_message(call.message.chat.id, call.message.id - 2)
