@@ -1,5 +1,6 @@
 from telebot import types
 
+from transportschedule import constants
 from transportschedule.schedule.process.processing import Processing
 from transportschedule.schedule.request.request import RequestSchedule
 from transportschedule.schedule.telegram.config import bot
@@ -45,8 +46,8 @@ async def handler_request_transport(call):
         )
         request_data = RequestSchedule(
             transport_types='bus',
-            from_station=9742908,
-            to_station=9742891,
+            from_station=constants.BUS_STATION_SERGIEV_POSAD,
+            to_station=constants.BUS_STOP_NORTH_VILLAGE,
         )
         return request_data.request_transport_between_stations()
     elif call.data == 'north_bus_station':
@@ -194,25 +195,29 @@ async def handler_thread(thread):
         to_station=to_station,
     )
     request = request.request_thread_transport_route()
-    process_thread = Processing(request)
+    process_thread = Processing(request, route_stops)
     thread_info = process_thread.detail_thread()
     return thread_info
 
 
 route_detail_info = None
 json_data = None
+route_stops = None
 
 
 @bot.callback_query_handler(
-    func=lambda call: '_g24_' not in call.data and 'back' not in call.data,
+    func=lambda call: '_g24_' not in call.data
+    and 'back' not in call.data
+    and 'f9' not in call.data,
 )
 async def callback_handler_bus_route(call):
     global route_detail_info
     global json_data
+    global route_stops
     await bot.delete_message(call.message.chat.id, call.message.id)
     json_data = await handler_request_transport(call)
     process = Processing(json_data)
-    route_info, route_detail_info = process.detail_transport()
+    route_info, route_detail_info, route_stops = process.detail_transport()
     await selected_route(call.message, route_info[:5], route_detail_info[:5])
 
 
@@ -226,7 +231,7 @@ async def route_detail_handler(call):
 
 
 @bot.callback_query_handler(func=lambda call: call.data == 'back')
-async def come_back(call):
+async def come_back_main(call):
     await bot.delete_message(call.message.chat.id, call.message.id - 4)
     await bot.delete_message(call.message.chat.id, call.message.id - 2)
     await bot.delete_message(call.message.chat.id, call.message.id)
