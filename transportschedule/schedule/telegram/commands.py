@@ -15,6 +15,8 @@ from transportschedule.schedule.telegram.keyboard import (
 route_detail_info = None
 json_data = None
 route_stops = None
+route_duration = None
+route_arrival = None
 
 
 @bot.message_handler(commands=['select'])
@@ -243,7 +245,12 @@ async def handler_thread(thread):
         to_station=to_station,
     )
     request = request.request_thread_transport_route()
-    process_thread = Processing(request, route_stops)
+    process_thread = Processing(
+        request,
+        route_stops,
+        route_duration,
+        route_arrival,
+    )
     thread_info = process_thread.detail_thread()
     return thread_info
 
@@ -262,10 +269,18 @@ async def callback_handler_bus_route(call):
     global route_detail_info
     global json_data
     global route_stops
+    global route_duration
+    global route_arrival
     await bot.delete_message(call.message.chat.id, call.message.id)
     json_data = await handler_request_transport(call)
     process = Processing(json_data)
-    route_info, route_detail_info, route_stops = process.detail_transport()
+    (
+        route_info,
+        route_detail_info,
+        route_stops,
+        route_duration,
+        route_arrival,
+    ) = process.detail_transport()
     await selected_route(call.message, route_info[:5], route_detail_info[:5])
 
 
