@@ -76,6 +76,39 @@ async def handler_request_transport(call):
             to_station=9742916,
         )
         return request_data.request_transport_between_stations()
+    elif call.data == 'north_gymnasium':
+        await bot.send_message(
+            call.message.chat.id,
+            'Выбран маршрут: От Северного посёлка до Гимназии №5',
+        )
+        request_data = RequestSchedule(
+            transport_types='bus',
+            from_station=9742891,
+            to_station=9742870,
+        )
+        return request_data.request_transport_between_stations()
+    elif call.data == 'north_vorobyovskaya':
+        await bot.send_message(
+            call.message.chat.id,
+            'Выбран маршрут: От Северного посёлка до Воробьёвской улицы',
+        )
+        request_data = RequestSchedule(
+            transport_types='bus',
+            from_station=9742891,
+            to_station=9742900,
+        )
+        return request_data.request_transport_between_stations()
+    elif call.data == 'vorobyovskaya_north':
+        await bot.send_message(
+            call.message.chat.id,
+            'Выбран маршрут: От Воробьёвской улицы до Северного посёлка',
+        )
+        request_data = RequestSchedule(
+            transport_types='bus',
+            from_station=9742900,
+            to_station=9742891,
+        )
+        return request_data.request_transport_between_stations()
     elif call.data == 'yaroslavsky_railway_station_sergiev_posad':
         await bot.send_message(
             call.message.chat.id,

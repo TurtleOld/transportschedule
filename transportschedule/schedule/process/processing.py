@@ -108,6 +108,4 @@ class Processing:
 <strong>График хождения:</strong> {days}
 <strong>Время отправления:</strong> {stop_departure}
 <strong>С остановками:</strong> {route_stops}
-<strong>Время в пути:</strong> {convert_time(duration)}
-<strong>Приезжает на конечную станцию:</strong> {to_title} в {arrival}
 '''

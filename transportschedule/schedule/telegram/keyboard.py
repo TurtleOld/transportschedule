@@ -22,7 +22,7 @@ async def select_transport_type(message):
 
 
 async def selected_bus(message):
-    keyboard = InlineKeyboardMarkup(row_width=1)
+    keyboard = InlineKeyboardMarkup(row_width=2)
     bus_station_north = InlineKeyboardButton(
         '\u00A0\u00A0Автовокзал - Северный\u00A0\u00A0',
         callback_data='bus_station_north',
@@ -35,7 +35,26 @@ async def selected_bus(message):
         '\u00A0\u00A0Северный - Завод ЖБИ\u00A0\u00A0',
         callback_data='north_zhbi',
     )
-    keyboard.add(bus_station_north, north_bus_station, north_zhbi)
+    north_gymnasium = InlineKeyboardButton(
+        '\u00A0\u00A0Северный - Гимназия № 5\u00A0\u00A0',
+        callback_data='north_gymnasium',
+    )
+    north_vorobyovskaya = InlineKeyboardButton(
+        '\u00A0\u00A0Северный - Воробьёвская улица\u00A0\u00A0',
+        callback_data='north_vorobyovskaya',
+    )
+    vorobyovskaya_north = InlineKeyboardButton(
+        '\u00A0\u00A0Воробьёвская улица - Северный\u00A0\u00A0',
+        callback_data='vorobyovskaya_north',
+    )
+    keyboard.add(
+        bus_station_north,
+        north_bus_station,
+        north_zhbi,
+        north_gymnasium,
+        north_vorobyovskaya,
+        vorobyovskaya_north,
+    )
     await bot.send_message(
         message.chat.id,
         '\u00A0\u00A0Выбери направление\u00A0\u00A0',
