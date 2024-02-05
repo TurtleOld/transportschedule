@@ -28,9 +28,9 @@ class JsonParser:
 
     def parse_json(
         self,
-        json_data: dict[Any, Any] | str | float,
+        json_data,
         key: str,
-    ) -> dict[Any, Any] | str | float:
+    ):
         """
         Метод разбора json данных.
 
@@ -53,9 +53,9 @@ class JsonParser:
 
     def __get_value(
         self,
-        dictionary: Optional[dict],
+        dictionary,
         key: str,
-    ) -> dict | str | list | int | None:
+    ):
         """
         Приватный метод получения значений из словаря (json данных).
 

@@ -122,7 +122,7 @@ class Processing:
         from_title = self.parser.parse_json(from_station, 'title')
         to_title = self.parser.parse_json(to_station, 'title')
         stops = self.parser.parse_json(self.json_data, 'stops')
-        stop_departure: dict[Any, Any] | str | float = ''
+        stop_departure = ''
         for stop in stops:
             stop_station = self.parser.parse_json(stop, 'station')
             stop_station_title = self.parser.parse_json(stop_station, 'title')
