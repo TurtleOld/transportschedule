@@ -1,10 +1,13 @@
 from datetime import datetime, timezone, timedelta
+from typing import Optional, Union, Any
+
+from icecream import ic
 
 from transportschedule.schedule.json_parse.json_parser import JsonParser
 
 
-def convert_time(seconds: float):
-    minutes = seconds // 60
+def convert_time(seconds: str | float) -> str:
+    minutes = int(seconds) // 60
     if minutes >= 60:
         return f'{int(minutes // 60)} час {int(minutes % 60)} мин.'
     return f'{int(minutes)} мин.'
@@ -17,7 +20,7 @@ class Processing:
         route_stops=None,
         route_duration=None,
         route_arrival=None,
-    ):
+    ) -> None:
         self.json_data = json_data
         self.parser = JsonParser(self.json_data)
         if route_stops is None:
@@ -54,13 +57,13 @@ class Processing:
         for segment in segments:
             departure = self.parser.parse_json(segment, 'departure')
             date_departure = datetime.strptime(
-                departure,
+                str(departure),
                 '%Y-%m-%dT%H:%M:%S%z',
             )
             if date_departure > current_datetime:
                 arrival = self.parser.parse_json(segment, 'arrival')
                 date_arrival = datetime.strptime(
-                    arrival,
+                    str(arrival),
                     '%Y-%m-%dT%H:%M:%S%z',
                 )
                 departure_format_date = date_departure.strftime('%H:%M')
@@ -98,7 +101,7 @@ class Processing:
             route_arrival,
         )
 
-    def detail_thread(self):
+    def detail_thread(self) -> str:
         number = self.parser.parse_json(self.json_data, 'number')
         short_title = self.parser.parse_json(self.json_data, 'short_title')
         days = self.parser.parse_json(self.json_data, 'days')
@@ -119,19 +122,19 @@ class Processing:
         from_title = self.parser.parse_json(from_station, 'title')
         to_title = self.parser.parse_json(to_station, 'title')
         stops = self.parser.parse_json(self.json_data, 'stops')
-        stop_departure = ''
+        stop_departure: dict[Any, Any] | str | float = ''
         for stop in stops:
             stop_station = self.parser.parse_json(stop, 'station')
             stop_station_title = self.parser.parse_json(stop_station, 'title')
             if from_title == stop_station_title:
-                stop_departure += stop['departure'][10:]
+                stop_departure = self.parser.parse_json(stop, 'departure')
         transport_type_name = 'Электричка'
         if transport_type == 'bus':
             transport_type_name = 'Автобус'
         return f'''<strong>{transport_type_name}:</strong> {number} {short_title}
 <strong>График движения:</strong> {days}
-<strong>Время отправления:</strong> {stop_departure}
+<strong>Время отправления:</strong> {stop_departure[11:]}
 <strong>С остановками:</strong> {route_stops}
 <strong>Время в пути составит:</strong> {duration}
-<strong>В пункт прибытия {to_title} прибывает в:</strong> {arrival}
+<strong>На конечный пункт {to_title} прибывает в:</strong> {arrival}
 '''

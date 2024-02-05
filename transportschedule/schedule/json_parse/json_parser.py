@@ -1,6 +1,6 @@
 """Модуль разбора json данных."""
 
-from typing import Optional
+from typing import Optional, Any
 
 
 class JsonParser:
@@ -22,15 +22,15 @@ class JsonParser:
         Приватный метод получения значений из словаря (json данных).
     """
 
-    def __init__(self, json_data):
+    def __init__(self, json_data: dict[Any, Any]) -> None:
         """Метод-конструктор инициализирующий аргумент json_data."""
         self.json_data = json_data
 
     def parse_json(
         self,
-        json_data: dict,
+        json_data: dict[Any, Any] | str | float,
         key: str,
-    ) -> dict | list[dict] | int | str | None:
+    ) -> dict[Any, Any] | str | float:
         """
         Метод разбора json данных.
 

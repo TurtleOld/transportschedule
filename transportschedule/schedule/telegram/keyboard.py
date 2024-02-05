@@ -1,9 +1,10 @@
+from telebot import types
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 from transportschedule.schedule.telegram.config import bot
 
 
-async def select_transport_type(message):
+async def select_transport_type(message: types.Message) -> None:
     keyboard = InlineKeyboardMarkup(row_width=1)
     bus = InlineKeyboardButton(
         '\u00A0\u00A0Автобус\u00A0\u00A0',
@@ -21,7 +22,7 @@ async def select_transport_type(message):
     )
 
 
-async def selected_bus(message):
+async def selected_bus(message: types.Message) -> None:
     keyboard = InlineKeyboardMarkup(row_width=2)
     bus_station_north = InlineKeyboardButton(
         '\u00A0\u00A0Автовокзал - Северный\u00A0\u00A0',
@@ -62,7 +63,7 @@ async def selected_bus(message):
     )
 
 
-async def selected_suburban(message):
+async def selected_suburban(message: types.Message) -> None:
     keyboard = InlineKeyboardMarkup(row_width=2)
     yaroslavsky_railway_station_sergiev_posad = InlineKeyboardButton(
         '\u00A0\u00A0Ярославкий вокзал - Сергиев Посад\u00A0\u00A0',
@@ -136,7 +137,11 @@ async def selected_suburban(message):
     )
 
 
-async def selected_route(message, route_info, route_detail_info):
+async def selected_route(
+    message: types.Message,
+    route_info: list[str],
+    route_detail_info: list[str],
+) -> None:
     keyboard = InlineKeyboardMarkup()
     if route_info:
         for route, detail in zip(route_info, route_detail_info):
@@ -160,7 +165,7 @@ async def selected_route(message, route_info, route_detail_info):
         )
 
 
-async def back_main(message, threads):
+async def back_main(message: types.Message, threads: str) -> None:
     keyboard = InlineKeyboardMarkup()
     keyboard.add(
         InlineKeyboardButton(

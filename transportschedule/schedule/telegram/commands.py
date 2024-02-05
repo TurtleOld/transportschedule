@@ -1,3 +1,6 @@
+from typing import Any, Dict
+
+from icecream import ic
 from telebot import types
 
 from transportschedule import constants
@@ -19,13 +22,15 @@ route_duration = None
 route_arrival = None
 
 
-@bot.message_handler(commands=['select'])
-async def handler_command_request(message: types.Message):
+@bot.message_handler(commands=['select'])  # type: ignore
+async def handler_command_request(message: types.Message) -> None:
     await select_transport_type(message)
 
 
-@bot.callback_query_handler(func=lambda call: call.data == 'bus')
-async def callback_handler_bus(call):
+@bot.callback_query_handler(
+    func=lambda call: call.data == 'bus',
+)  # type: ignore
+async def callback_handler_bus(call: types.CallbackQuery) -> None:
     await bot.delete_message(call.message.chat.id, call.message.id)
     await bot.send_message(
         call.message.chat.id,
@@ -34,8 +39,10 @@ async def callback_handler_bus(call):
     await selected_bus(call.message)
 
 
-@bot.callback_query_handler(func=lambda call: call.data == 'suburban')
-async def callback_handler_suburban(call):
+@bot.callback_query_handler(
+    func=lambda call: call.data == 'suburban',
+)  # type: ignore
+async def callback_handler_suburban(call: types.CallbackQuery) -> None:
     await bot.delete_message(call.message.chat.id, call.message.id)
     await bot.send_message(
         call.message.chat.id,
@@ -44,7 +51,9 @@ async def callback_handler_suburban(call):
     await selected_suburban(call.message)
 
 
-async def handler_request_transport(call):
+async def handler_request_transport(
+    call: types.CallbackQuery,
+) -> Dict[str, str | int] | None:
     if call.data == 'bus_station_north':
         await bot.send_message(
             call.message.chat.id,
@@ -232,9 +241,12 @@ async def handler_request_transport(call):
             to_station=9601301,
         )
         return request_data.request_transport_between_stations()
+    else:
+        await bot.send_message(call.message.chat.id, 'Маршрут не выбран!')
+        return None
 
 
-async def handler_thread(thread):
+async def handler_thread(thread: str) -> str:
     process_thread = Processing(json_data)
     station_info = process_thread.get_transport_route()
     from_station = station_info[0]
@@ -244,19 +256,20 @@ async def handler_thread(thread):
         from_station=from_station,
         to_station=to_station,
     )
-    request = request.request_thread_transport_route()
+    json_data_thread = request.request_thread_transport_route()
     process_thread = Processing(
-        request,
+        json_data_thread,
         route_stops,
         route_duration,
         route_arrival,
     )
-    thread_info = process_thread.detail_thread()
-    return thread_info
+    return process_thread.detail_thread()
 
 
-@bot.callback_query_handler(func=lambda call: call.data.startswith('thread'))
-async def route_detail_handler(call):
+@bot.callback_query_handler(
+    func=lambda call: call.data.startswith('thread'),
+)  # type: ignore
+async def route_detail_handler(call: types.CallbackQuery) -> None:
     await bot.delete_message(call.message.chat.id, call.message.id)
     threads = await handler_thread(call.data[7:])
     await back_main(call.message, threads)
@@ -264,8 +277,8 @@ async def route_detail_handler(call):
 
 @bot.callback_query_handler(
     func=lambda call: call.data and call.data not in 'back',
-)
-async def callback_handler_bus_route(call):
+)  # type: ignore
+async def callback_handler_bus_route(call: types.CallbackQuery) -> None:
     global route_detail_info
     global json_data
     global route_stops
@@ -284,14 +297,16 @@ async def callback_handler_bus_route(call):
     await selected_route(call.message, route_info[:5], route_detail_info[:5])
 
 
-@bot.callback_query_handler(func=lambda call: call.data in 'back')
-async def come_back_main(call):
+@bot.callback_query_handler(
+    func=lambda call: call.data in 'back',
+)  # type: ignore
+async def come_back_main(call: types.CallbackQuery) -> None:
     await bot.delete_message(call.message.chat.id, call.message.id - 4)
     await bot.delete_message(call.message.chat.id, call.message.id - 2)
     await bot.delete_message(call.message.chat.id, call.message.id)
     await select_transport_type(call.message)
 
 
-async def start_bot():
+async def start_bot() -> Any:
     """Function for start telegram bot"""
     return await bot.infinity_polling()
