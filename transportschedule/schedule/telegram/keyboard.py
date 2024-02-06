@@ -1,7 +1,10 @@
+from icecream import ic
 from telebot import types
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 from transportschedule.schedule.telegram.config import bot
+
+send_message = []
 
 
 async def select_transport_type(message: types.Message) -> None:
@@ -15,11 +18,12 @@ async def select_transport_type(message: types.Message) -> None:
         callback_data='suburban',
     )
     keyboard.add(bus, suburban)
-    await bot.send_message(
+    sent_message = await bot.send_message(
         message.chat.id,
         '\u00A0\u00A0Выбери тип транспорта\u00A0\u00A0',
         reply_markup=keyboard,
     )
+    send_message.append(sent_message)
 
 
 async def selected_bus(message: types.Message) -> None:
@@ -56,11 +60,12 @@ async def selected_bus(message: types.Message) -> None:
         north_vorobyovskaya,
         vorobyovskaya_north,
     )
-    await bot.send_message(
+    sent_message = await bot.send_message(
         message.chat.id,
         '\u00A0\u00A0Выбери направление\u00A0\u00A0',
         reply_markup=keyboard,
     )
+    send_message.append(sent_message)
 
 
 async def selected_suburban(message: types.Message) -> None:
@@ -129,12 +134,19 @@ async def selected_suburban(message: types.Message) -> None:
         black_serp_molot,
         serp_molot_black,
     )
-    await bot.send_message(
+    keyboard.add(
+        InlineKeyboardButton(
+            text='Вернуться в начало',
+            callback_data='back',
+        )
+    )
+    sent_message = await bot.send_message(
         message.chat.id,
         'Выбери направление',
         reply_markup=keyboard,
         parse_mode='HTML',
     )
+    send_message.append(sent_message)
 
 
 async def selected_route(
@@ -152,17 +164,31 @@ async def selected_route(
                     callback_data=callback_data,
                 )
             )
-        await bot.send_message(
+        keyboard.add(
+            InlineKeyboardButton(
+                text='Вернуться в начало',
+                callback_data='back',
+            )
+        )
+        sent_message = await bot.send_message(
             message.chat.id,
             'Маршруты:',
             reply_markup=keyboard,
         )
+        send_message.append(sent_message)
     else:
-        await bot.send_message(
+        keyboard.add(
+            InlineKeyboardButton(
+                text='Вернуться в начало',
+                callback_data='back',
+            )
+        )
+        sent_message = await bot.send_message(
             message.chat.id,
             'На сегодня нет маршрутов...',
             reply_markup=keyboard,
         )
+        send_message.append(sent_message)
 
 
 async def back_main(message: types.Message, threads: str) -> None:
@@ -173,4 +199,9 @@ async def back_main(message: types.Message, threads: str) -> None:
             callback_data='back',
         )
     )
-    await bot.send_message(message.chat.id, threads, reply_markup=keyboard)
+    sent_message = await bot.send_message(
+        message.chat.id,
+        threads,
+        reply_markup=keyboard,
+    )
+    send_message.append(sent_message)

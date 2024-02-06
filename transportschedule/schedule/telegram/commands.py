@@ -13,6 +13,7 @@ from transportschedule.schedule.telegram.keyboard import (
     selected_route,
     selected_suburban,
     back_main,
+    send_message,
 )
 
 route_detail_info = None
@@ -32,10 +33,11 @@ async def handler_command_request(message: types.Message) -> None:
 )  # type: ignore
 async def callback_handler_bus(call: types.CallbackQuery) -> None:
     await bot.delete_message(call.message.chat.id, call.message.id)
-    await bot.send_message(
+    sent_message = await bot.send_message(
         call.message.chat.id,
         'Выбран вид транспорта: Автобус',
     )
+    send_message.append(sent_message)
     await selected_bus(call.message)
 
 
@@ -44,10 +46,11 @@ async def callback_handler_bus(call: types.CallbackQuery) -> None:
 )  # type: ignore
 async def callback_handler_suburban(call: types.CallbackQuery) -> None:
     await bot.delete_message(call.message.chat.id, call.message.id)
-    await bot.send_message(
+    sent_message = await bot.send_message(
         call.message.chat.id,
         'Выбран вид транспорта: Электричка',
     )
+    send_message.append(sent_message)
     await selected_suburban(call.message)
 
 
@@ -55,10 +58,11 @@ async def handler_request_transport(
     call: types.CallbackQuery,
 ) -> Dict[str, str | int] | None:
     if call.data == 'bus_station_north':
-        await bot.send_message(
+        sent_message = await bot.send_message(
             call.message.chat.id,
             'Выбран маршрут: От Автовокзала Сергиев Посад до Северного посёлка',
         )
+        send_message.append(sent_message)
         request_data = RequestSchedule(
             transport_types='bus',
             from_station=constants.BUS_STATION_SERGIEV_POSAD,
@@ -66,10 +70,11 @@ async def handler_request_transport(
         )
         return request_data.request_transport_between_stations()
     elif call.data == 'north_bus_station':
-        await bot.send_message(
+        sent_message = await bot.send_message(
             call.message.chat.id,
             'Выбран маршрут: От Северного посёлка до Автовокзала Сергиев Посад',
         )
+        send_message.append(sent_message)
         request_data = RequestSchedule(
             transport_types='bus',
             from_station=9742891,
@@ -77,10 +82,11 @@ async def handler_request_transport(
         )
         return request_data.request_transport_between_stations()
     elif call.data == 'north_zhbi':
-        await bot.send_message(
+        sent_message = await bot.send_message(
             call.message.chat.id,
             'Выбран маршрут: От Северного посёлка до Завода ЖБИ',
         )
+        send_message.append(sent_message)
         request_data = RequestSchedule(
             transport_types='bus',
             from_station=9742891,
@@ -88,10 +94,11 @@ async def handler_request_transport(
         )
         return request_data.request_transport_between_stations()
     elif call.data == 'north_gymnasium':
-        await bot.send_message(
+        sent_message = await bot.send_message(
             call.message.chat.id,
             'Выбран маршрут: От Северного посёлка до Гимназии №5',
         )
+        send_message.append(sent_message)
         request_data = RequestSchedule(
             transport_types='bus',
             from_station=9742891,
@@ -99,10 +106,11 @@ async def handler_request_transport(
         )
         return request_data.request_transport_between_stations()
     elif call.data == 'north_vorobyovskaya':
-        await bot.send_message(
+        sent_message = await bot.send_message(
             call.message.chat.id,
             'Выбран маршрут: От Северного посёлка до Воробьёвской улицы',
         )
+        send_message.append(sent_message)
         request_data = RequestSchedule(
             transport_types='bus',
             from_station=9742891,
@@ -110,10 +118,11 @@ async def handler_request_transport(
         )
         return request_data.request_transport_between_stations()
     elif call.data == 'vorobyovskaya_north':
-        await bot.send_message(
+        sent_message = await bot.send_message(
             call.message.chat.id,
             'Выбран маршрут: От Воробьёвской улицы до Северного посёлка',
         )
+        send_message.append(sent_message)
         request_data = RequestSchedule(
             transport_types='bus',
             from_station=9742900,
@@ -121,10 +130,11 @@ async def handler_request_transport(
         )
         return request_data.request_transport_between_stations()
     elif call.data == 'yaroslavsky_railway_station_sergiev_posad':
-        await bot.send_message(
+        sent_message = await bot.send_message(
             call.message.chat.id,
             'Выбран маршрут: От Ярославского вокзала до Сергиев Посада',
         )
+        send_message.append(sent_message)
         request_data = RequestSchedule(
             transport_types='suburban',
             from_station=2000002,
@@ -132,10 +142,11 @@ async def handler_request_transport(
         )
         return request_data.request_transport_between_stations()
     elif call.data == 'sergiev_posad_yaroslavsky_railway_station':
-        await bot.send_message(
+        sent_message = await bot.send_message(
             call.message.chat.id,
             'Выбран маршрут: От Сергиев Посада до Ярославского вокзала',
         )
+        send_message.append(sent_message)
         request_data = RequestSchedule(
             transport_types='suburban',
             from_station=9601389,
@@ -143,10 +154,11 @@ async def handler_request_transport(
         )
         return request_data.request_transport_between_stations()
     elif call.data == 'yaroslavsky_railway_station_podlipki':
-        await bot.send_message(
+        sent_message = await bot.send_message(
             call.message.chat.id,
             'Выбран маршрут: От Ярославского вокзала до Подлипки-Дачные',
         )
+        send_message.append(sent_message)
         request_data = RequestSchedule(
             transport_types='suburban',
             from_station=2000002,
@@ -154,10 +166,11 @@ async def handler_request_transport(
         )
         return request_data.request_transport_between_stations()
     elif call.data == 'podlipki_yaroslavsky_railway_station':
-        await bot.send_message(
+        sent_message = await bot.send_message(
             call.message.chat.id,
             'Выбран маршрут: От Подлипки-Дачные до Ярославского вокзала',
         )
+        send_message.append(sent_message)
         request_data = RequestSchedule(
             transport_types='suburban',
             from_station=9600691,
@@ -165,10 +178,11 @@ async def handler_request_transport(
         )
         return request_data.request_transport_between_stations()
     elif call.data == 'podlipki_mytischi':
-        await bot.send_message(
+        sent_message = await bot.send_message(
             call.message.chat.id,
             'Выбран маршрут: От Подлипки-Дачные до Мытищи',
         )
+        send_message.append(sent_message)
         request_data = RequestSchedule(
             transport_types='suburban',
             from_station=9600691,
@@ -176,10 +190,11 @@ async def handler_request_transport(
         )
         return request_data.request_transport_between_stations()
     elif call.data == 'mytischi_podlipki':
-        await bot.send_message(
+        sent_message = await bot.send_message(
             call.message.chat.id,
             'Выбран маршрут: От Мытищи до Подлипки-Дачные',
         )
+        send_message.append(sent_message)
         request_data = RequestSchedule(
             transport_types='suburban',
             from_station=9600681,
@@ -187,10 +202,11 @@ async def handler_request_transport(
         )
         return request_data.request_transport_between_stations()
     elif call.data == 'yaroslavsky_railway_station_mytischi':
-        await bot.send_message(
+        sent_message = await bot.send_message(
             call.message.chat.id,
             'Выбран маршрут: От Ярославского вокзала до Мытищи',
         )
+        send_message.append(sent_message)
         request_data = RequestSchedule(
             transport_types='suburban',
             from_station=2000002,
@@ -198,10 +214,11 @@ async def handler_request_transport(
         )
         return request_data.request_transport_between_stations()
     elif call.data == 'sergiev_posad_mytischi':
-        await bot.send_message(
+        sent_message = await bot.send_message(
             call.message.chat.id,
             'Выбран маршрут: От Сергиев Посада до Мытищи',
         )
+        send_message.append(sent_message)
         request_data = RequestSchedule(
             transport_types='suburban',
             from_station=9601389,
@@ -209,10 +226,11 @@ async def handler_request_transport(
         )
         return request_data.request_transport_between_stations()
     elif call.data == 'mytischi_sergiev_posad':
-        await bot.send_message(
+        sent_message = await bot.send_message(
             call.message.chat.id,
             'Выбран маршрут: От Мытищи до Сергиев Посада',
         )
+        send_message.append(sent_message)
         request_data = RequestSchedule(
             transport_types='suburban',
             from_station=9600681,
@@ -220,10 +238,11 @@ async def handler_request_transport(
         )
         return request_data.request_transport_between_stations()
     elif call.data == 'black_serp_molot':
-        await bot.send_message(
+        sent_message = await bot.send_message(
             call.message.chat.id,
             'Выбран маршрут: От Чёрное до Серп и Молот',
         )
+        send_message.append(sent_message)
         request_data = RequestSchedule(
             transport_types='suburban',
             from_station=9601301,
@@ -231,10 +250,11 @@ async def handler_request_transport(
         )
         return request_data.request_transport_between_stations()
     elif call.data == 'serp_molot_black':
-        await bot.send_message(
+        sent_message = await bot.send_message(
             call.message.chat.id,
             'Выбран маршрут: От Серп и Молот до Чёрное',
         )
+        send_message.append(sent_message)
         request_data = RequestSchedule(
             transport_types='suburban',
             from_station=9601796,
@@ -242,7 +262,11 @@ async def handler_request_transport(
         )
         return request_data.request_transport_between_stations()
     else:
-        await bot.send_message(call.message.chat.id, 'Маршрут не выбран!')
+        sent_message = await bot.send_message(
+            call.message.chat.id,
+            'Маршрут не выбран!',
+        )
+        send_message.append(sent_message)
         return None
 
 
@@ -301,9 +325,12 @@ async def callback_handler_bus_route(call: types.CallbackQuery) -> None:
     func=lambda call: call.data in 'back',
 )  # type: ignore
 async def come_back_main(call: types.CallbackQuery) -> None:
-    await bot.delete_message(call.message.chat.id, call.message.id - 4)
-    await bot.delete_message(call.message.chat.id, call.message.id - 2)
-    await bot.delete_message(call.message.chat.id, call.message.id)
+    for message in send_message:
+        try:
+            await bot.delete_message(call.message.chat.id, message.message_id)
+        except Exception as e:
+            print(e)
+            continue
     await select_transport_type(call.message)
 
 
