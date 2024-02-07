@@ -139,10 +139,23 @@ class Processing:
 <strong>На конечный пункт {to_title} прибывает в:</strong> {arrival}
 '''
 
-    def station_list(self) -> None:
+    def station_list(self) -> dict[str, Any]:
         stations = self.parser.parse_json(self.json_data, 'stations')
+        selected_stations = {}
         for station in stations:
             transport_type = self.parser.parse_json(
                 station,
                 'transport_type',
             )
+            code = self.parser.parse_json(station, 'code')
+            title = self.parser.parse_json(station, 'title')
+            station_type_name = self.parser.parse_json(
+                station,
+                'station_type_name',
+            )
+            selected_stations[code] = {
+                'transport_type': transport_type,
+                'station_type_name': station_type_name,
+                'title': title,
+            }
+        return selected_stations

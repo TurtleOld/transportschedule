@@ -7,6 +7,23 @@ from transportschedule.schedule.telegram.config import bot
 send_message = []
 
 
+async def keyboard_station(message: types.Message, stations):
+    keyboard = InlineKeyboardMarkup(row_width=2)
+    for key, value in stations.items():
+        keyboard.add(
+            InlineKeyboardButton(
+                f'\u00A0\u00A0{str(value["station_type_name"]).capitalize()}: {value["title"]}\u00A0\u00A0',
+                callback_data=key,
+            )
+        )
+    sent_message = await bot.send_message(
+        message.chat.id,
+        '\u00A0\u00A0Остановки в радиусе 1 км:\u00A0\u00A0',
+        reply_markup=keyboard,
+    )
+    send_message.append(sent_message)
+
+
 async def select_transport_type(message: types.Message) -> None:
     keyboard = InlineKeyboardMarkup(row_width=1)
     bus = InlineKeyboardButton(

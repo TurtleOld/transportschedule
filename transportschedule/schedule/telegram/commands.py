@@ -14,6 +14,7 @@ from transportschedule.schedule.telegram.keyboard import (
     selected_suburban,
     back_main,
     send_message,
+    keyboard_station,
 )
 
 route_detail_info = None
@@ -31,12 +32,19 @@ async def handle_location(message: types.Message):
     )
     response = location.request_station_location().json()
     process_station = Processing(response)
-    process_station.station_list()
+    result_station = process_station.station_list()
+    await keyboard_station(message, result_station)
 
 
 @bot.message_handler(commands=['select'])  # type: ignore
 async def handler_command_request(message: types.Message) -> None:
     await select_transport_type(message)
+
+
+@bot.callback_query_handler(
+    func=lambda call: call.data.startswith('s'),
+)  # type: ignore
+async def handle_stations(call: types.CallbackQuery) -> None: ...
 
 
 @bot.callback_query_handler(
