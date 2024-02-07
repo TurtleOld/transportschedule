@@ -138,3 +138,11 @@ class Processing:
 <strong>Время в пути составит:</strong> {duration}
 <strong>На конечный пункт {to_title} прибывает в:</strong> {arrival}
 '''
+
+    def station_list(self) -> None:
+        stations = self.parser.parse_json(self.json_data, 'stations')
+        for station in stations:
+            transport_type = self.parser.parse_json(
+                station,
+                'transport_type',
+            )
