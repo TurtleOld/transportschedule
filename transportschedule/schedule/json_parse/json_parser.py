@@ -1,6 +1,6 @@
 """Модуль разбора json данных."""
 
-from typing import Optional, Any
+from typing import Any
 
 
 class JsonParser:
@@ -30,6 +30,7 @@ class JsonParser:
         self,
         json_data,
         key: str,
+        key2: str = None,
     ):
         """
         Метод разбора json данных.
@@ -49,12 +50,13 @@ class JsonParser:
         list[dict] | None
             Словарь внутри списка, либо None
         """
-        return JsonParser.__get_value(self, json_data, key)
+        return JsonParser.__get_value(self, json_data, key, key2)
 
     def __get_value(
         self,
         dictionary,
         key: str,
+        key2: str = None,
     ):
         """
         Приватный метод получения значений из словаря (json данных).
@@ -72,17 +74,8 @@ class JsonParser:
             В зависимости от условий, может возвращать строку, список, число.
         """
         if isinstance(dictionary, dict):
-            dictionary_values = dictionary.values()
             dict_value = dictionary.get(key, None)
-        else:
-            return None
-
-        if dict_value is not None:
+            if key2 and isinstance(dict_value, dict):
+                return dict_value.get(key2, None)
             return dict_value
-
-        for nested_dict in dictionary_values:
-            dict_value = self.__get_value(nested_dict, key)
-            if dict_value is not None:
-                return dict_value
-
         return None
