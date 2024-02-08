@@ -1,6 +1,6 @@
 """Модуль разбора json данных."""
 
-from typing import Any
+from typing import Optional, Any
 
 
 class JsonParser:
@@ -74,8 +74,18 @@ class JsonParser:
             В зависимости от условий, может возвращать строку, список, число.
         """
         if isinstance(dictionary, dict):
+            dictionary_values = dictionary.values()
             dict_value = dictionary.get(key, None)
-            if key2 and isinstance(dict_value, dict):
-                return dict_value.get(key2, None)
+        else:
+            return None
+
+        if dict_value is not None:
             return dict_value
+
+        for nested_dict in dictionary_values:
+            dict_value = self.__get_value(nested_dict, key)
+            if key2 and isinstance(dict_value, dict):
+                dict_value = self.__get_value(nested_dict, key, key2)
+            if dict_value is not None:
+                return dict_value
         return None

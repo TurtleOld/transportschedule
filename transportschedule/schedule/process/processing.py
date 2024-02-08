@@ -1,8 +1,5 @@
 from datetime import datetime, timezone, timedelta
 from typing import Any
-
-from icecream import ic
-
 from transportschedule.schedule.json_parse.json_parser import JsonParser
 
 
@@ -31,6 +28,7 @@ class Processing:
 
     def get_transport_route(self) -> tuple:
         from_station = self.parser.parse_json(self.json_data, 'from')
+        ic(from_station)
         from_code = self.parser.parse_json(from_station, 'code')
         to_station = self.parser.parse_json(self.json_data, 'to')
         to_code = self.parser.parse_json(to_station, 'code')
@@ -70,7 +68,6 @@ class Processing:
                 arrival_format_date = date_arrival.strftime('%H:%M')
                 number_route = self.parser.parse_json(
                     segment,
-                    'thread',
                     'number',
                 )
                 thread_route = self.parser.parse_json(segment, 'thread')
@@ -184,7 +181,6 @@ class Processing:
                     'thread',
                     'uid',
                 )
-                ic(uid)
                 short_title = self.parser.parse_json(
                     skd,
                     'thread',
@@ -214,5 +210,4 @@ class Processing:
                 count_results += 1
                 if count_results >= 10:
                     break
-        ic(selected_flight_schedule_station)
         return selected_flight_schedule_station

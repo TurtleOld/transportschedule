@@ -1,3 +1,4 @@
+import re
 from typing import Any, Dict
 
 from icecream import ic
@@ -41,7 +42,7 @@ async def handler_command_request(message: types.Message) -> None:
 
 
 @bot.callback_query_handler(
-    func=lambda call: call.data.startswith('s') and not call.data == 'suburban',
+    func=lambda call: re.match(r's\d+', call.data),
 )  # type: ignore
 async def handle_stations(call: types.CallbackQuery) -> None:
     ic(call.data)

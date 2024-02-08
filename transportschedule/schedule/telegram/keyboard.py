@@ -1,4 +1,3 @@
-from icecream import ic
 from telebot import types
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
@@ -174,6 +173,7 @@ async def selected_route(
     keyboard = InlineKeyboardMarkup()
     if route_info:
         for route, detail in zip(route_info, route_detail_info):
+            print(route)
             callback_data = 'thread ' + ' '.join(detail.split()[:5])
             keyboard.row(
                 InlineKeyboardButton(
