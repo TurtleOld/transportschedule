@@ -1,5 +1,5 @@
 from datetime import datetime, timezone, timedelta
-from typing import Optional, Union, Any
+from typing import Any
 
 from icecream import ic
 
@@ -68,7 +68,11 @@ class Processing:
                 )
                 departure_format_date = date_departure.strftime('%H:%M')
                 arrival_format_date = date_arrival.strftime('%H:%M')
-                number_route = self.parser.parse_json(segment, 'number')
+                number_route = self.parser.parse_json(
+                    segment,
+                    'thread',
+                    'number',
+                )
                 thread_route = self.parser.parse_json(segment, 'thread')
                 duration = convert_time(
                     self.parser.parse_json(segment, 'duration'),
@@ -147,15 +151,68 @@ class Processing:
                 station,
                 'transport_type',
             )
-            code = self.parser.parse_json(station, 'code')
-            title = self.parser.parse_json(station, 'title')
-            station_type_name = self.parser.parse_json(
-                station,
-                'station_type_name',
-            )
-            selected_stations[code] = {
-                'transport_type': transport_type,
-                'station_type_name': station_type_name,
-                'title': title,
-            }
+            if transport_type == 'train':
+                code = self.parser.parse_json(station, 'code')
+                title = self.parser.parse_json(station, 'title')
+                station_type_name = self.parser.parse_json(
+                    station,
+                    'station_type_name',
+                )
+                selected_stations[code] = {
+                    'transport_type': transport_type,
+                    'station_type_name': station_type_name,
+                    'title': title,
+                }
         return selected_stations
+
+    def flight_schedule_station(self) -> dict[str, Any]:
+        selected_flight_schedule_station: dict = {}
+        utc_offset = timedelta(hours=3)
+        current_time = timezone(utc_offset)
+        current_datetime = datetime.now(current_time)
+        schedule = self.parser.parse_json(self.json_data, 'schedule')
+        count_results = 0
+        for skd in schedule:
+            departure = self.parser.parse_json(skd, 'departure')
+            date_departure = datetime.strptime(
+                str(departure),
+                '%Y-%m-%dT%H:%M:%S%z',
+            )
+            if date_departure > current_datetime:
+                uid = self.parser.parse_json(
+                    skd,
+                    'thread',
+                    'uid',
+                )
+                ic(uid)
+                short_title = self.parser.parse_json(
+                    skd,
+                    'thread',
+                    'short_title',
+                )
+                stops = self.parser.parse_json(
+                    skd,
+                    'stops',
+                )
+                platform = self.parser.parse_json(
+                    skd,
+                    'platform',
+                )
+                number = self.parser.parse_json(
+                    skd,
+                    'thread',
+                    'number',
+                )
+                departure_format_time = date_departure.strftime('%H:%M')
+                selected_flight_schedule_station[uid] = {
+                    'short_title': short_title,
+                    'stops': stops,
+                    'platform': platform,
+                    'number': number,
+                    'departure_format_time': departure_format_time,
+                }
+                count_results += 1
+                if count_results >= 10:
+                    break
+        ic(selected_flight_schedule_station)
+        return selected_flight_schedule_station

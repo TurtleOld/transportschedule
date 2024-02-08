@@ -216,6 +216,12 @@ async def back_main(message: types.Message, threads: str) -> None:
             callback_data='back',
         )
     )
+    keyboard.add(
+        InlineKeyboardButton(
+            text='Запомнить маршрут',
+            callback_data=f'schedule_{message.chat.id}',
+        )
+    )
     sent_message = await bot.send_message(
         message.chat.id,
         threads,

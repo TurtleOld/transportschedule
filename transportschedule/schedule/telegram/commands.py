@@ -2,7 +2,6 @@ from typing import Any, Dict
 
 from icecream import ic
 from telebot import types
-
 from transportschedule import constants
 from transportschedule.schedule.process.processing import Processing
 from transportschedule.schedule.request.request import RequestSchedule
@@ -42,9 +41,26 @@ async def handler_command_request(message: types.Message) -> None:
 
 
 @bot.callback_query_handler(
-    func=lambda call: call.data.startswith('s'),
+    func=lambda call: call.data.startswith('s') and not call.data == 'suburban',
 )  # type: ignore
-async def handle_stations(call: types.CallbackQuery) -> None: ...
+async def handle_stations(call: types.CallbackQuery) -> None:
+    ic(call.data)
+    transport_route = ''
+    station_response = RequestSchedule(current_station=call.data)
+    result_station_response = station_response.request_flight_schedule_station()
+    process_station_response = Processing(result_station_response.json())
+    result = process_station_response.flight_schedule_station()
+    for key, value in result.items():
+        departure_format_time = value.get('departure_format_time')
+        number = value.get('number')
+        short_title = value.get('short_title')
+        stops = value.get('stops')
+        transport_route += f'''
+        
+{departure_format_time}
+{number} {short_title}
+С остановками {stops}'''
+    await bot.send_message(call.message.chat.id, transport_route)
 
 
 @bot.callback_query_handler(
