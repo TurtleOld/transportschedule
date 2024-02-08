@@ -1,7 +1,5 @@
 """Модуль разбора json данных."""
 
-from typing import Optional, Any
-
 
 class JsonParser:
     """
@@ -22,39 +20,9 @@ class JsonParser:
         Приватный метод получения значений из словаря (json данных).
     """
 
-    def __init__(self, json_data: dict[Any, Any]) -> None:
-        """Метод-конструктор инициализирующий аргумент json_data."""
-        self.json_data = json_data
-
     def parse_json(
         self,
         json_data,
-        key: str,
-        key2: str = None,
-    ):
-        """
-        Метод разбора json данных.
-
-        Принимает словарь и ключ для поиска значения в переданном словаре.
-
-        АРГУМЕНТЫ:
-
-        json_data: dict
-            Принимает словарь.
-
-        key: str
-            Ключ для поиска в словаре.
-
-        ВОЗВРАЩАЕТ:
-
-        list[dict] | None
-            Словарь внутри списка, либо None
-        """
-        return JsonParser.__get_value(self, json_data, key, key2)
-
-    def __get_value(
-        self,
-        dictionary,
         key: str,
         key2: str = None,
     ):
@@ -73,19 +41,21 @@ class JsonParser:
         str | list | int | None
             В зависимости от условий, может возвращать строку, список, число.
         """
-        if isinstance(dictionary, dict):
-            dictionary_values = dictionary.values()
-            dict_value = dictionary.get(key, None)
+        if isinstance(json_data, dict):
+            dict_value = json_data.get(key, None)
         else:
             return None
 
         if dict_value is not None:
-            return dict_value
-
-        for nested_dict in dictionary_values:
-            dict_value = self.__get_value(nested_dict, key)
-            if key2 and isinstance(dict_value, dict):
-                dict_value = self.__get_value(nested_dict, key, key2)
-            if dict_value is not None:
+            if key2 is None:
                 return dict_value
+            elif isinstance(dict_value, dict):
+                return dict_value.get(key2, None)
+            return None
+
+        for nested_dict in json_data.values():
+            if isinstance(nested_dict, dict):
+                dict_value = self.parse_json(nested_dict, key, key2)
+                if dict_value is not None:
+                    return dict_value
         return None

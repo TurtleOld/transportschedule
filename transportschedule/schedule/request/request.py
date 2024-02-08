@@ -2,7 +2,6 @@ import datetime
 import os
 import dotenv
 import requests
-from icecream import ic
 from requests import Response
 
 dotenv.load_dotenv()
@@ -61,6 +60,7 @@ class RequestSchedule:
             'uid': self.uid,
             'from': self.from_station,
             'to': self.to_station,
+            'limit': self.limit,
         }
         return requests.get(self.thread_url, params=params)
 
@@ -70,6 +70,7 @@ class RequestSchedule:
             'lat': self.latitude,
             'lng': self.longitude,
             'distance': self.distance,
+            'limit': self.limit,
         }
         return requests.get(self.nearest_stations_url, params=params)
 
@@ -78,5 +79,6 @@ class RequestSchedule:
             'apikey': self.api_key,
             'date': self.date,
             'station': self.current_station,
+            'limit': self.limit,
         }
         return requests.get(self.schedule_url, params=params)

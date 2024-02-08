@@ -1,12 +1,17 @@
 from telebot import types
-from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
+from telebot.types import (
+    InlineKeyboardMarkup,
+    InlineKeyboardButton,
+    ReplyKeyboardMarkup,
+    KeyboardButton,
+)
 
 from transportschedule.schedule.telegram.config import bot
 
 send_message = []
 
 
-async def keyboard_station(message: types.Message, stations):
+async def keyboard_station(message: types.Message, stations) -> None:
     keyboard = InlineKeyboardMarkup(row_width=2)
     for key, value in stations.items():
         keyboard.add(
@@ -21,6 +26,16 @@ async def keyboard_station(message: types.Message, stations):
         reply_markup=keyboard,
     )
     send_message.append(sent_message)
+
+
+def get_geo_location() -> ReplyKeyboardMarkup:
+    markup = ReplyKeyboardMarkup(one_time_keyboard=True, resize_keyboard=True)
+    button = KeyboardButton(
+        text='Отправить местоположение',
+        request_location=True,
+    )
+    markup.add(button)
+    return markup
 
 
 async def select_transport_type(message: types.Message) -> None:
@@ -225,6 +240,22 @@ async def back_main(message: types.Message, threads: str) -> None:
     sent_message = await bot.send_message(
         message.chat.id,
         threads,
+        reply_markup=keyboard,
+    )
+    send_message.append(sent_message)
+
+
+async def back_from_routes(message: types.Message, routes: str) -> None:
+    keyboard = InlineKeyboardMarkup()
+    keyboard.add(
+        InlineKeyboardButton(
+            text='Вернуться в начало',
+            callback_data='back',
+        )
+    )
+    sent_message = await bot.send_message(
+        message.chat.id,
+        routes,
         reply_markup=keyboard,
     )
     send_message.append(sent_message)

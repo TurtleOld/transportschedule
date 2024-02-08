@@ -1,7 +1,6 @@
 import re
 from typing import Any, Dict
 
-from icecream import ic
 from telebot import types
 from transportschedule import constants
 from transportschedule.schedule.process.processing import Processing
@@ -15,6 +14,7 @@ from transportschedule.schedule.telegram.keyboard import (
     back_main,
     send_message,
     keyboard_station,
+    back_from_routes,
 )
 
 route_detail_info = None
@@ -45,7 +45,6 @@ async def handler_command_request(message: types.Message) -> None:
     func=lambda call: re.match(r's\d+', call.data),
 )  # type: ignore
 async def handle_stations(call: types.CallbackQuery) -> None:
-    ic(call.data)
     transport_route = ''
     station_response = RequestSchedule(current_station=call.data)
     result_station_response = station_response.request_flight_schedule_station()
@@ -61,7 +60,8 @@ async def handle_stations(call: types.CallbackQuery) -> None:
 {departure_format_time}
 {number} {short_title}
 С остановками {stops}'''
-    await bot.send_message(call.message.chat.id, transport_route)
+
+    await back_from_routes(call.message, transport_route)
 
 
 @bot.callback_query_handler(
@@ -354,7 +354,7 @@ async def callback_handler_bus_route(call: types.CallbackQuery) -> None:
         route_duration,
         route_arrival,
     ) = process.detail_transport()
-    await selected_route(call.message, route_info[:5], route_detail_info[:5])
+    await selected_route(call.message, route_info[:7], route_detail_info[:7])
 
 
 @bot.callback_query_handler(

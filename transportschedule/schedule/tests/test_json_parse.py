@@ -1,8 +1,6 @@
 import json
 import pathlib
 
-from icecream import ic
-
 from transportschedule.schedule.json_parse.json_parser import JsonParser
 
 
@@ -14,7 +12,7 @@ def test_json_parse():
     with open(file) as json_data:
         data = json.load(json_data)
 
-        parser = JsonParser(data)
+        parser = JsonParser()
 
         assert parser.parse_json(data, 'to') == {
             "code": "s9742891",
@@ -26,5 +24,4 @@ def test_json_parse():
             "transport_type": "bus",
             "type": "station",
         }
-
         assert parser.parse_json(data, 'to', 'title') == 'Северный посёлок'

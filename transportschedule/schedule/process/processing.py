@@ -1,5 +1,6 @@
 from datetime import datetime, timezone, timedelta
 from typing import Any
+
 from transportschedule.schedule.json_parse.json_parser import JsonParser
 
 
@@ -19,7 +20,7 @@ class Processing:
         route_arrival=None,
     ) -> None:
         self.json_data = json_data
-        self.parser = JsonParser(self.json_data)
+        self.parser = JsonParser()
         if route_stops is None:
             self.route_stops = {}
         self.route_stops = route_stops
@@ -28,7 +29,6 @@ class Processing:
 
     def get_transport_route(self) -> tuple:
         from_station = self.parser.parse_json(self.json_data, 'from')
-        ic(from_station)
         from_code = self.parser.parse_json(from_station, 'code')
         to_station = self.parser.parse_json(self.json_data, 'to')
         to_code = self.parser.parse_json(to_station, 'code')
@@ -178,12 +178,10 @@ class Processing:
             if date_departure > current_datetime:
                 uid = self.parser.parse_json(
                     skd,
-                    'thread',
                     'uid',
                 )
                 short_title = self.parser.parse_json(
                     skd,
-                    'thread',
                     'short_title',
                 )
                 stops = self.parser.parse_json(
@@ -196,7 +194,6 @@ class Processing:
                 )
                 number = self.parser.parse_json(
                     skd,
-                    'thread',
                     'number',
                 )
                 departure_format_time = date_departure.strftime('%H:%M')
