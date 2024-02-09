@@ -30,7 +30,8 @@ async def handle_location(message: types.Message):
         longitude=message.location.longitude,
         latitude=message.location.latitude,
     )
-    response = location.request_station_location().json()
+    result_response_location = await location.request_station_location()
+    response = result_response_location.json()
     process_station = Processing(response)
     result_station = process_station.station_list()
     await keyboard_station(message, result_station)
@@ -47,7 +48,7 @@ async def handler_command_request(message: types.Message) -> None:
 async def handle_stations(call: types.CallbackQuery) -> None:
     transport_route = ''
     station_response = RequestSchedule(current_station=call.data)
-    result_station_response = station_response.request_flight_schedule_station()
+    result_station_response = await station_response.request_flight_schedule_station()
     process_station_response = Processing(result_station_response.json())
     result = process_station_response.flight_schedule_station()
     for key, value in result.items():
@@ -104,7 +105,8 @@ async def handler_request_transport(
             from_station=constants.BUS_STATION_SERGIEV_POSAD,
             to_station=constants.BUS_STOP_NORTH_VILLAGE,
         )
-        return request_data.request_transport_between_stations().json()
+        json_stations = await request_data.request_transport_between_stations()
+        return json_stations.json()
     elif call.data == 'north_bus_station':
         sent_message = await bot.send_message(
             call.message.chat.id,
@@ -116,7 +118,8 @@ async def handler_request_transport(
             from_station=9742891,
             to_station=9742908,
         )
-        return request_data.request_transport_between_stations().json()
+        json_stations = await request_data.request_transport_between_stations()
+        return json_stations.json()
     elif call.data == 'north_zhbi':
         sent_message = await bot.send_message(
             call.message.chat.id,
@@ -128,7 +131,8 @@ async def handler_request_transport(
             from_station=9742891,
             to_station=9742916,
         )
-        return request_data.request_transport_between_stations().json()
+        json_stations = await request_data.request_transport_between_stations()
+        return json_stations.json()
     elif call.data == 'north_gymnasium':
         sent_message = await bot.send_message(
             call.message.chat.id,
@@ -140,7 +144,8 @@ async def handler_request_transport(
             from_station=9742891,
             to_station=9742870,
         )
-        return request_data.request_transport_between_stations().json()
+        json_stations = await request_data.request_transport_between_stations()
+        return json_stations.json()
     elif call.data == 'north_vorobyovskaya':
         sent_message = await bot.send_message(
             call.message.chat.id,
@@ -152,7 +157,8 @@ async def handler_request_transport(
             from_station=9742891,
             to_station=9742900,
         )
-        return request_data.request_transport_between_stations().json()
+        json_stations = await request_data.request_transport_between_stations()
+        return json_stations.json()
     elif call.data == 'vorobyovskaya_north':
         sent_message = await bot.send_message(
             call.message.chat.id,
@@ -164,7 +170,8 @@ async def handler_request_transport(
             from_station=9742900,
             to_station=9742891,
         )
-        return request_data.request_transport_between_stations().json()
+        json_stations = await request_data.request_transport_between_stations()
+        return json_stations.json()
     elif call.data == 'yaroslavsky_railway_station_sergiev_posad':
         sent_message = await bot.send_message(
             call.message.chat.id,
@@ -176,7 +183,8 @@ async def handler_request_transport(
             from_station=2000002,
             to_station=9601389,
         )
-        return request_data.request_transport_between_stations().json()
+        json_stations = await request_data.request_transport_between_stations()
+        return json_stations.json()
     elif call.data == 'sergiev_posad_yaroslavsky_railway_station':
         sent_message = await bot.send_message(
             call.message.chat.id,
@@ -188,7 +196,8 @@ async def handler_request_transport(
             from_station=9601389,
             to_station=2000002,
         )
-        return request_data.request_transport_between_stations().json()
+        json_stations = await request_data.request_transport_between_stations()
+        return json_stations.json()
     elif call.data == 'yaroslavsky_railway_station_podlipki':
         sent_message = await bot.send_message(
             call.message.chat.id,
@@ -200,7 +209,8 @@ async def handler_request_transport(
             from_station=2000002,
             to_station=9600691,
         )
-        return request_data.request_transport_between_stations().json()
+        json_stations = await request_data.request_transport_between_stations()
+        return json_stations.json()
     elif call.data == 'podlipki_yaroslavsky_railway_station':
         sent_message = await bot.send_message(
             call.message.chat.id,
@@ -212,7 +222,8 @@ async def handler_request_transport(
             from_station=9600691,
             to_station=2000002,
         )
-        return request_data.request_transport_between_stations().json()
+        json_stations = await request_data.request_transport_between_stations()
+        return json_stations.json()
     elif call.data == 'podlipki_mytischi':
         sent_message = await bot.send_message(
             call.message.chat.id,
@@ -224,7 +235,8 @@ async def handler_request_transport(
             from_station=9600691,
             to_station=9600681,
         )
-        return request_data.request_transport_between_stations().json()
+        json_stations = await request_data.request_transport_between_stations()
+        return json_stations.json()
     elif call.data == 'mytischi_podlipki':
         sent_message = await bot.send_message(
             call.message.chat.id,
@@ -236,7 +248,8 @@ async def handler_request_transport(
             from_station=9600681,
             to_station=9600691,
         )
-        return request_data.request_transport_between_stations().json()
+        json_stations = await request_data.request_transport_between_stations()
+        return json_stations.json()
     elif call.data == 'yaroslavsky_railway_station_mytischi':
         sent_message = await bot.send_message(
             call.message.chat.id,
@@ -248,7 +261,8 @@ async def handler_request_transport(
             from_station=2000002,
             to_station=9600681,
         )
-        return request_data.request_transport_between_stations().json()
+        json_stations = await request_data.request_transport_between_stations()
+        return json_stations.json()
     elif call.data == 'sergiev_posad_mytischi':
         sent_message = await bot.send_message(
             call.message.chat.id,
@@ -260,7 +274,8 @@ async def handler_request_transport(
             from_station=9601389,
             to_station=9600681,
         )
-        return request_data.request_transport_between_stations().json()
+        json_stations = await request_data.request_transport_between_stations()
+        return json_stations.json()
     elif call.data == 'mytischi_sergiev_posad':
         sent_message = await bot.send_message(
             call.message.chat.id,
@@ -272,7 +287,8 @@ async def handler_request_transport(
             from_station=9600681,
             to_station=9601389,
         )
-        return request_data.request_transport_between_stations().json()
+        json_stations = await request_data.request_transport_between_stations()
+        return json_stations.json()
     elif call.data == 'black_serp_molot':
         sent_message = await bot.send_message(
             call.message.chat.id,
@@ -284,7 +300,8 @@ async def handler_request_transport(
             from_station=9601301,
             to_station=9601796,
         )
-        return request_data.request_transport_between_stations().json()
+        json_stations = await request_data.request_transport_between_stations()
+        return json_stations.json()
     elif call.data == 'serp_molot_black':
         sent_message = await bot.send_message(
             call.message.chat.id,
@@ -296,7 +313,8 @@ async def handler_request_transport(
             from_station=9601796,
             to_station=9601301,
         )
-        return request_data.request_transport_between_stations().json()
+        json_stations = await request_data.request_transport_between_stations()
+        return json_stations.json()
     else:
         sent_message = await bot.send_message(
             call.message.chat.id,
@@ -316,7 +334,8 @@ async def handler_thread(thread: str) -> str:
         from_station=from_station,
         to_station=to_station,
     )
-    json_data_thread = request.request_thread_transport_route().json()
+    result_request = await request.request_thread_transport_route()
+    json_data_thread = result_request.json()
     process_thread = Processing(
         json_data_thread,
         route_stops,

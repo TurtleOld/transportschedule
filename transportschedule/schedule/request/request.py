@@ -4,6 +4,8 @@ import dotenv
 import requests
 from requests import Response
 
+from transportschedule.schedule.request.httprequest import request_schedule
+
 dotenv.load_dotenv()
 
 
@@ -32,17 +34,15 @@ class RequestSchedule:
         self.distance: int = distance
         self.date: str = date
         self.api_key: str | None = os.environ.get('YANDEX_API_KEY')
-        self.search_url: str = 'https://api.rasp.yandex.net/v3.0/search/'
-        self.thread_url: str = 'https://api.rasp.yandex.net/v3.0/thread/'
-        self.nearest_stations_url: str = (
-            'https://api.rasp.yandex.net/v3.0/nearest_stations/'
-        )
-        self.schedule_url: str = 'https://api.rasp.yandex.net/v3.0/schedule/'
+        self.search_url: str = 'search/'
+        self.thread_url: str = 'thread/'
+        self.nearest_stations_url: str = 'nearest_stations/'
+        self.schedule_url: str = 'schedule/'
         self.offset: int = offset
         self.limit: int = limit
         self.uid: str = uid
 
-    def request_transport_between_stations(self) -> Response:
+    async def request_transport_between_stations(self) -> Response:
         params: dict[str, str | int | None] = {
             'apikey': self.api_key,
             'transport_types': self.transport_types,
@@ -52,9 +52,9 @@ class RequestSchedule:
             'offset': self.offset,
             'limit': self.limit,
         }
-        return requests.get(self.search_url, params=params)
+        return await request_schedule(self.search_url, params=params)
 
-    def request_thread_transport_route(self) -> Response:
+    async def request_thread_transport_route(self) -> Response:
         params: dict[str, str | int | None] = {
             'apikey': self.api_key,
             'uid': self.uid,
@@ -62,9 +62,9 @@ class RequestSchedule:
             'to': self.to_station,
             'limit': self.limit,
         }
-        return requests.get(self.thread_url, params=params)
+        return await request_schedule(self.thread_url, params=params)
 
-    def request_station_location(self) -> Response:
+    async def request_station_location(self) -> Response:
         params: dict[str, str | int | None] = {
             'apikey': self.api_key,
             'lat': self.latitude,
@@ -72,13 +72,13 @@ class RequestSchedule:
             'distance': self.distance,
             'limit': self.limit,
         }
-        return requests.get(self.nearest_stations_url, params=params)
+        return await request_schedule(self.nearest_stations_url, params=params)
 
-    def request_flight_schedule_station(self) -> Response:
+    async def request_flight_schedule_station(self) -> Response:
         params: dict[str, str | int | None] = {
             'apikey': self.api_key,
             'date': self.date,
             'station': self.current_station,
             'limit': self.limit,
         }
-        return requests.get(self.schedule_url, params=params)
+        return await request_schedule(self.schedule_url, params=params)
