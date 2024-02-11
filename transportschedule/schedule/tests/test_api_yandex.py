@@ -1,8 +1,10 @@
 import datetime
 import os
 
+import httpx
 import requests
 from dotenv import load_dotenv
+from icecream import ic
 
 from transportschedule import constants
 from transportschedule.schedule.request.request import RequestSchedule
@@ -10,15 +12,15 @@ from transportschedule.schedule.request.request import RequestSchedule
 load_dotenv()
 
 
-def test_request_transport_between_stations():
+async def test_request_transport_between_stations():
     request = RequestSchedule(
         transport_types='bus',
         from_station=constants.BUS_STATION_SERGIEV_POSAD,
         to_station=constants.BUS_STOP_NORTH_VILLAGE,
         date=datetime.datetime.now().isoformat(),
     )
-    response = request.request_transport_between_stations()
-
+    response = await request.request_transport_between_stations()
+    print(response)
     assert response.status_code == 200
 
 
@@ -35,7 +37,7 @@ def test_api_error():
 
     url_search = 'https://api.rasp.yandex.net/v3.0/search/'
 
-    response = requests.get(url_search, params=params)
+    response = httpx.get(url_search, params=params)
 
     assert response.status_code == 404
 
