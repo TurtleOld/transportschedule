@@ -15,9 +15,8 @@ class JsonParser:
     parse_json(json_data: dict, key: str) -> list[dict] | int | str | None
         Метод разбора json данных.
         Принимает словарь и ключ для поиска значения в переданном словаре.
-
-    __get_value(dictionary, key) -> str | list | int | None)
-        Приватный метод получения значений из словаря (json данных).
+        Второй ключ является по-умолчанию None, но если он указан, то ищет
+        вложенный ключ
     """
 
     def parse_json(
@@ -27,13 +26,15 @@ class JsonParser:
         key2: str = None,
     ):
         """
-        Приватный метод получения значений из словаря (json данных).
+        Метод получения значений из словаря (json данных).
 
         АРГУМЕНТЫ:
 
         dictionary: dict
             Принимает словарь данных.
         key: str
+            Принимает ключ для поиска значения в словаре.
+        key2: str
             Принимает ключ для поиска значения в словаре.
 
         ВОЗВРАЩАЕТ:
@@ -49,7 +50,7 @@ class JsonParser:
         if dict_value is not None:
             if key2 is None:
                 return dict_value
-            elif isinstance(dict_value, dict):
+            if isinstance(dict_value, dict):
                 return dict_value.get(key2, None)
             return None
 

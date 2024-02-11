@@ -2,9 +2,7 @@ import datetime
 import os
 
 import httpx
-import requests
 from dotenv import load_dotenv
-from icecream import ic
 
 from transportschedule import constants
 from transportschedule.schedule.request.request import RequestSchedule

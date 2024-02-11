@@ -9,7 +9,7 @@ def test_json_parse():
         'transportschedule/schedule/tests/test_data/request.json',
     )
 
-    with open(file) as json_data:
+    with open(file, 'r', encoding='utf-8') as json_data:
         data = json.load(json_data)
 
         parser = JsonParser()

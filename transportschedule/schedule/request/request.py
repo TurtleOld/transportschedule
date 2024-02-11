@@ -1,7 +1,6 @@
 import datetime
 import os
 import dotenv
-import requests
 from requests import Response
 
 from transportschedule.schedule.request.httprequest import request_schedule

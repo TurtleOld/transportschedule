@@ -83,6 +83,14 @@ async def selected_bus(message: types.Message) -> None:
         '\u00A0\u00A0Воробьёвская улица - Северный\u00A0\u00A0',
         callback_data='vorobyovskaya_north',
     )
+    north_capitol = InlineKeyboardButton(
+        '\u00A0\u00A0Северный - ТЦ Капитолий\u00A0\u00A0',
+        callback_data='north_capitol',
+    )
+    capitol_north = InlineKeyboardButton(
+        '\u00A0\u00A0ТЦ Капитолий - Северный\u00A0\u00A0',
+        callback_data='capitol_north',
+    )
     keyboard.add(
         bus_station_north,
         north_bus_station,
@@ -90,6 +98,8 @@ async def selected_bus(message: types.Message) -> None:
         north_gymnasium,
         north_vorobyovskaya,
         vorobyovskaya_north,
+        north_capitol,
+        capitol_north,
     )
     sent_message = await bot.send_message(
         message.chat.id,
@@ -150,6 +160,10 @@ async def selected_suburban(message: types.Message) -> None:
         '\u00A0\u00A0Серп и Молот - Чёрное\u00A0\u00A0',
         callback_data='serp_molot_black',
     )
+    kalanchevskaya_black = InlineKeyboardButton(
+        '\u00A0\u00A0Каланчёвская - Чёрное\u00A0\u00A0',
+        callback_data='kalanchevskaya_black',
+    )
     keyboard.row(
         yaroslavsky_railway_station_sergiev_posad,
         sergiev_posad_yaroslavsky_railway_station,
@@ -164,6 +178,7 @@ async def selected_suburban(message: types.Message) -> None:
         mytischi_sergiev_posad,
         black_serp_molot,
         serp_molot_black,
+        kalanchevskaya_black,
     )
     keyboard.add(
         InlineKeyboardButton(

@@ -1,6 +1,5 @@
 from datetime import datetime, timezone, timedelta
 from typing import Any
-
 from transportschedule.schedule.json_parse.json_parser import JsonParser
 
 
@@ -43,8 +42,8 @@ class Processing:
 
     def detail_transport(self) -> tuple[list, list, dict, dict, dict]:
         segments = self.parser.parse_json(self.json_data, 'segments')
-        route_info: list = list()
-        route_detail_info: list = list()
+        route_info: list = []
+        route_detail_info: list = []
         route_stops: dict = {}
         route_duration: dict = {}
         route_arrival: dict = {}

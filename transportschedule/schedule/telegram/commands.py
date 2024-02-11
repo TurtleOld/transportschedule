@@ -1,8 +1,8 @@
+import json
+import os
 import re
 from typing import Any, Dict
-
 from telebot import types
-from transportschedule import constants
 from transportschedule.schedule.process.processing import Processing
 from transportschedule.schedule.request.request import RequestSchedule
 from transportschedule.schedule.telegram.config import bot
@@ -94,231 +94,29 @@ async def callback_handler_suburban(call: types.CallbackQuery) -> None:
 async def handler_request_transport(
     call: types.CallbackQuery,
 ) -> Dict[str, str | int] | None:
-    if call.data == 'bus_station_north':
+    try:
+        json_file = os.path.abspath('schedule/telegram/routes.json')
+        with open(json_file, 'r') as route_file:
+            json_route = json.load(route_file)
+
+        for key, value in json_route.items():
+            if key == call.data:
+                sent_message = await bot.send_message(
+                    call.message.chat.id, value.get('text', None)
+                )
+                send_message.append(sent_message)
+
+                request_data = RequestSchedule(
+                    transport_types=value.get('transport_types', None),
+                    from_station=value.get('from_station', None),
+                    to_station=value.get('to_station', None),
+                )
+                json_stations = await request_data.request_transport_between_stations()
+                return json_stations.json()
+    except Exception as error:
         sent_message = await bot.send_message(
             call.message.chat.id,
-            'Выбран маршрут: От Автовокзала Сергиев Посад до Северного посёлка',
-        )
-        send_message.append(sent_message)
-        request_data = RequestSchedule(
-            transport_types='bus',
-            from_station=constants.BUS_STATION_SERGIEV_POSAD,
-            to_station=constants.BUS_STOP_NORTH_VILLAGE,
-        )
-        json_stations = await request_data.request_transport_between_stations()
-        return json_stations.json()
-    elif call.data == 'north_bus_station':
-        sent_message = await bot.send_message(
-            call.message.chat.id,
-            'Выбран маршрут: От Северного посёлка до Автовокзала Сергиев Посад',
-        )
-        send_message.append(sent_message)
-        request_data = RequestSchedule(
-            transport_types='bus',
-            from_station=9742891,
-            to_station=9742908,
-        )
-        json_stations = await request_data.request_transport_between_stations()
-        return json_stations.json()
-    elif call.data == 'north_zhbi':
-        sent_message = await bot.send_message(
-            call.message.chat.id,
-            'Выбран маршрут: От Северного посёлка до Завода ЖБИ',
-        )
-        send_message.append(sent_message)
-        request_data = RequestSchedule(
-            transport_types='bus',
-            from_station=9742891,
-            to_station=9742916,
-        )
-        json_stations = await request_data.request_transport_between_stations()
-        return json_stations.json()
-    elif call.data == 'north_gymnasium':
-        sent_message = await bot.send_message(
-            call.message.chat.id,
-            'Выбран маршрут: От Северного посёлка до Гимназии №5',
-        )
-        send_message.append(sent_message)
-        request_data = RequestSchedule(
-            transport_types='bus',
-            from_station=9742891,
-            to_station=9742870,
-        )
-        json_stations = await request_data.request_transport_between_stations()
-        return json_stations.json()
-    elif call.data == 'north_vorobyovskaya':
-        sent_message = await bot.send_message(
-            call.message.chat.id,
-            'Выбран маршрут: От Северного посёлка до Воробьёвской улицы',
-        )
-        send_message.append(sent_message)
-        request_data = RequestSchedule(
-            transport_types='bus',
-            from_station=9742891,
-            to_station=9742900,
-        )
-        json_stations = await request_data.request_transport_between_stations()
-        return json_stations.json()
-    elif call.data == 'vorobyovskaya_north':
-        sent_message = await bot.send_message(
-            call.message.chat.id,
-            'Выбран маршрут: От Воробьёвской улицы до Северного посёлка',
-        )
-        send_message.append(sent_message)
-        request_data = RequestSchedule(
-            transport_types='bus',
-            from_station=9742900,
-            to_station=9742891,
-        )
-        json_stations = await request_data.request_transport_between_stations()
-        return json_stations.json()
-    elif call.data == 'yaroslavsky_railway_station_sergiev_posad':
-        sent_message = await bot.send_message(
-            call.message.chat.id,
-            'Выбран маршрут: От Ярославского вокзала до Сергиев Посада',
-        )
-        send_message.append(sent_message)
-        request_data = RequestSchedule(
-            transport_types='suburban',
-            from_station=2000002,
-            to_station=9601389,
-        )
-        json_stations = await request_data.request_transport_between_stations()
-        return json_stations.json()
-    elif call.data == 'sergiev_posad_yaroslavsky_railway_station':
-        sent_message = await bot.send_message(
-            call.message.chat.id,
-            'Выбран маршрут: От Сергиев Посада до Ярославского вокзала',
-        )
-        send_message.append(sent_message)
-        request_data = RequestSchedule(
-            transport_types='suburban',
-            from_station=9601389,
-            to_station=2000002,
-        )
-        json_stations = await request_data.request_transport_between_stations()
-        return json_stations.json()
-    elif call.data == 'yaroslavsky_railway_station_podlipki':
-        sent_message = await bot.send_message(
-            call.message.chat.id,
-            'Выбран маршрут: От Ярославского вокзала до Подлипки-Дачные',
-        )
-        send_message.append(sent_message)
-        request_data = RequestSchedule(
-            transport_types='suburban',
-            from_station=2000002,
-            to_station=9600691,
-        )
-        json_stations = await request_data.request_transport_between_stations()
-        return json_stations.json()
-    elif call.data == 'podlipki_yaroslavsky_railway_station':
-        sent_message = await bot.send_message(
-            call.message.chat.id,
-            'Выбран маршрут: От Подлипки-Дачные до Ярославского вокзала',
-        )
-        send_message.append(sent_message)
-        request_data = RequestSchedule(
-            transport_types='suburban',
-            from_station=9600691,
-            to_station=2000002,
-        )
-        json_stations = await request_data.request_transport_between_stations()
-        return json_stations.json()
-    elif call.data == 'podlipki_mytischi':
-        sent_message = await bot.send_message(
-            call.message.chat.id,
-            'Выбран маршрут: От Подлипки-Дачные до Мытищи',
-        )
-        send_message.append(sent_message)
-        request_data = RequestSchedule(
-            transport_types='suburban',
-            from_station=9600691,
-            to_station=9600681,
-        )
-        json_stations = await request_data.request_transport_between_stations()
-        return json_stations.json()
-    elif call.data == 'mytischi_podlipki':
-        sent_message = await bot.send_message(
-            call.message.chat.id,
-            'Выбран маршрут: От Мытищи до Подлипки-Дачные',
-        )
-        send_message.append(sent_message)
-        request_data = RequestSchedule(
-            transport_types='suburban',
-            from_station=9600681,
-            to_station=9600691,
-        )
-        json_stations = await request_data.request_transport_between_stations()
-        return json_stations.json()
-    elif call.data == 'yaroslavsky_railway_station_mytischi':
-        sent_message = await bot.send_message(
-            call.message.chat.id,
-            'Выбран маршрут: От Ярославского вокзала до Мытищи',
-        )
-        send_message.append(sent_message)
-        request_data = RequestSchedule(
-            transport_types='suburban',
-            from_station=2000002,
-            to_station=9600681,
-        )
-        json_stations = await request_data.request_transport_between_stations()
-        return json_stations.json()
-    elif call.data == 'sergiev_posad_mytischi':
-        sent_message = await bot.send_message(
-            call.message.chat.id,
-            'Выбран маршрут: От Сергиев Посада до Мытищи',
-        )
-        send_message.append(sent_message)
-        request_data = RequestSchedule(
-            transport_types='suburban',
-            from_station=9601389,
-            to_station=9600681,
-        )
-        json_stations = await request_data.request_transport_between_stations()
-        return json_stations.json()
-    elif call.data == 'mytischi_sergiev_posad':
-        sent_message = await bot.send_message(
-            call.message.chat.id,
-            'Выбран маршрут: От Мытищи до Сергиев Посада',
-        )
-        send_message.append(sent_message)
-        request_data = RequestSchedule(
-            transport_types='suburban',
-            from_station=9600681,
-            to_station=9601389,
-        )
-        json_stations = await request_data.request_transport_between_stations()
-        return json_stations.json()
-    elif call.data == 'black_serp_molot':
-        sent_message = await bot.send_message(
-            call.message.chat.id,
-            'Выбран маршрут: От Чёрное до Серп и Молот',
-        )
-        send_message.append(sent_message)
-        request_data = RequestSchedule(
-            transport_types='suburban',
-            from_station=9601301,
-            to_station=9601796,
-        )
-        json_stations = await request_data.request_transport_between_stations()
-        return json_stations.json()
-    elif call.data == 'serp_molot_black':
-        sent_message = await bot.send_message(
-            call.message.chat.id,
-            'Выбран маршрут: От Серп и Молот до Чёрное',
-        )
-        send_message.append(sent_message)
-        request_data = RequestSchedule(
-            transport_types='suburban',
-            from_station=9601796,
-            to_station=9601301,
-        )
-        json_stations = await request_data.request_transport_between_stations()
-        return json_stations.json()
-    else:
-        sent_message = await bot.send_message(
-            call.message.chat.id,
-            'Маршрут не выбран!',
+            error,
         )
         send_message.append(sent_message)
         return None
