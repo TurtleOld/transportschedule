@@ -35,6 +35,18 @@
         "from_station": 9742900,
         "to_station": 9742891
     },
+    "north_capitol": {
+        "transport_types": "bus",
+        "text": "Выбран маршрут: От Северного посёлка до ТЦ Капитолий",
+        "from_station": 9742891,
+        "to_station": 9742877
+    },
+    "capitol_north": {
+        "transport_types": "bus",
+        "text": "Выбран маршрут: От ТЦ Капитолий до Северного посёлка",
+        "from_station": 9742877,
+        "to_station": 9742891
+    },
     "yaroslavsky_railway_station_sergiev_posad": {
         "transport_types": "suburban",
         "text": "Выбран маршрут: От Ярославского вокзала до Сергиев Посада",
