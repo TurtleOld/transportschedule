@@ -2,6 +2,8 @@ import json
 import os
 import re
 from typing import Any, Dict
+
+from icecream import ic
 from telebot import types
 from transportschedule.schedule.process.processing import Processing
 from transportschedule.schedule.request.request import RequestSchedule
@@ -95,9 +97,10 @@ async def handler_request_transport(
     call: types.CallbackQuery,
 ) -> Dict[str, str | int] | None:
     try:
-        path = '../transportschedule/schedule/telegram/routes.json'
-        json_file = os.path.abspath(path)
-        with open(json_file, 'r') as route_file:
+        current_directory = os.path.dirname(__file__)
+        file_name = 'routes.json'
+        file_path = os.path.abspath(os.path.join(current_directory, file_name))
+        with open(file_path, 'r') as route_file:
             json_route = json.load(route_file)
 
         for key, value in json_route.items():
