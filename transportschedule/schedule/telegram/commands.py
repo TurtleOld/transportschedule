@@ -95,7 +95,8 @@ async def handler_request_transport(
     call: types.CallbackQuery,
 ) -> Dict[str, str | int] | None:
     try:
-        json_file = os.path.abspath('schedule/telegram/routes.json')
+        path = '../transportschedule/schedule/telegram/routes.json'
+        json_file = os.path.abspath(path)
         with open(json_file, 'r') as route_file:
             json_route = json.load(route_file)
 
