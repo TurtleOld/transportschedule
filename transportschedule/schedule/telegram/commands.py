@@ -196,6 +196,6 @@ async def come_back_main(call: types.CallbackQuery) -> None:
     await select_transport_type(call.message)
 
 
-async def start_bot() -> Any:
+def start_bot() -> Any:
     """Function for start telegram bot"""
-    return await bot.infinity_polling()
+    return bot.infinity_polling()
