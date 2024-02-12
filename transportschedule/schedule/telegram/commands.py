@@ -2,8 +2,6 @@ import json
 import os
 import re
 from typing import Any, Dict
-
-from icecream import ic
 from telebot import types
 from transportschedule.schedule.process.processing import Processing
 from transportschedule.schedule.request.request import RequestSchedule
@@ -19,11 +17,7 @@ from transportschedule.schedule.telegram.keyboard import (
     back_from_routes,
 )
 
-route_detail_info = None
-json_data = None
 route_stops = None
-route_duration = None
-route_arrival = None
 
 
 @bot.message_handler(content_types=['location'])
@@ -124,61 +118,28 @@ async def handler_request_transport(
         return None
 
 
-async def handler_thread(thread: str) -> str:
-    process_thread = Processing(json_data)
-    station_info = process_thread.get_transport_route()
-    from_station = station_info[0]
-    to_station = station_info[2]
-    request = RequestSchedule(
-        uid=thread,
-        from_station=from_station,
-        to_station=to_station,
-    )
-    result_request = await request.request_thread_transport_route()
-    json_data_thread = result_request.json()
-    process_thread = Processing(
-        json_data_thread,
-        route_stops,
-        route_duration,
-        route_arrival,
-    )
-    return process_thread.detail_thread()
-
-
-@bot.callback_query_handler(
-    func=lambda call: call.data.startswith('thread'),
-)  # type: ignore
-async def route_detail_handler(call: types.CallbackQuery) -> None:
-    await bot.delete_message(call.message.chat.id, call.message.id)
-    threads = await handler_thread(call.data[7:])
-    await back_main(call.message, threads)
+async def handler_thread(thread: dict) -> str:
+    for key, value in thread.items():
+        process_thread = Processing(value)
+        return process_thread.detail_thread()
 
 
 @bot.callback_query_handler(
     func=lambda call: call.data and call.data not in 'back',
 )  # type: ignore
 async def callback_handler_bus_route(call: types.CallbackQuery) -> None:
-    global route_detail_info
-    global json_data
-    global route_stops
-    global route_duration
-    global route_arrival
     try:
-        await bot.delete_message(call.message.chat.id, call.message.id)
-        json_data = await handler_request_transport(call)
-        process = Processing(json_data)
-        (
-            route_info,
-            route_detail_info,
-            route_stops,
-            route_duration,
-            route_arrival,
-        ) = process.detail_transport()
-        await selected_route(
-            call.message,
-            route_info[:7],
-            route_detail_info[:7],
-        )
+        global route_stops
+        if call.data.startswith('thread'):
+            threads = await handler_thread(route_stops)
+            await back_main(call.message, threads)
+        else:
+            await bot.delete_message(call.message.chat.id, call.message.id)
+            json_data = await handler_request_transport(call)
+            process = Processing(json_data)
+            route_stops = await process.detail_transport()
+            await selected_route(call.message, route_stops)
+
     except Exception as e:
         await bot.send_message(call.message.chat.id, e)
 

@@ -195,19 +195,14 @@ async def selected_suburban(message: types.Message) -> None:
     send_message.append(sent_message)
 
 
-async def selected_route(
-    message: types.Message,
-    route_info: list[str],
-    route_detail_info: list[str],
-) -> None:
+async def selected_route(message: types.Message, route_info: dict) -> None:
     keyboard = InlineKeyboardMarkup()
     if route_info:
-        for route, detail in zip(route_info, route_detail_info):
-            print(route)
-            callback_data = 'thread ' + ' '.join(detail.split()[:5])
+        for key, value in route_info.items():
+            callback_data = 'thread_' + key
             keyboard.row(
                 InlineKeyboardButton(
-                    text=f'\u00A0\u00A0\u00A0{route}\u00A0\u00A0\u00A0',
+                    text=f'\u00A0\u00A0\u00A0{value.get("route", None)}\u00A0\u00A0\u00A0',
                     callback_data=callback_data,
                 )
             )

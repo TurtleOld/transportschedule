@@ -1,6 +1,7 @@
 from datetime import datetime, timezone, timedelta
 from typing import Any
 from transportschedule.schedule.json_parse.json_parser import JsonParser
+from transportschedule.schedule.request.request import RequestSchedule
 
 
 def convert_time(seconds: str | float) -> str:
@@ -11,20 +12,9 @@ def convert_time(seconds: str | float) -> str:
 
 
 class Processing:
-    def __init__(
-        self,
-        json_data,
-        route_stops=None,
-        route_duration=None,
-        route_arrival=None,
-    ) -> None:
+    def __init__(self, json_data) -> None:
         self.json_data = json_data
         self.parser = JsonParser()
-        if route_stops is None:
-            self.route_stops = {}
-        self.route_stops = route_stops
-        self.route_duration = route_duration
-        self.route_arrival = route_arrival
 
     def get_transport_route(self) -> tuple:
         from_station = self.parser.parse_json(self.json_data, 'from')
@@ -40,17 +30,14 @@ class Processing:
             title_to,
         )
 
-    def detail_transport(self) -> tuple[list, list, dict, dict, dict]:
+    async def detail_transport(self) -> dict:
         segments = self.parser.parse_json(self.json_data, 'segments')
-        route_info: list = []
-        route_detail_info: list = []
         route_stops: dict = {}
-        route_duration: dict = {}
-        route_arrival: dict = {}
+
         utc_offset = timedelta(hours=3)
         current_time = timezone(utc_offset)
         current_datetime = datetime.now(current_time)
-
+        count_results = 0
         for segment in segments:
             departure = self.parser.parse_json(segment, 'departure')
             date_departure = datetime.strptime(
@@ -58,6 +45,8 @@ class Processing:
                 '%Y-%m-%dT%H:%M:%S%z',
             )
             if date_departure > current_datetime:
+                from_station = self.parser.parse_json(segment, 'from')
+                to_station = self.parser.parse_json(segment, 'to')
                 arrival = self.parser.parse_json(segment, 'arrival')
                 date_arrival = datetime.strptime(
                     str(arrival),
@@ -78,32 +67,43 @@ class Processing:
                     'short_title',
                 )
                 uid_thread = self.parser.parse_json(thread_route, 'uid')
+                request = RequestSchedule(
+                    uid=uid_thread,
+                    from_station=from_station.get('code', None),
+                    to_station=to_station.get('code', None),
+                )
+                threads = await request.request_thread_transport_route()
+                days = self.parser.parse_json(threads.json(), 'days')
                 stops = self.parser.parse_json(segment, 'stops')
-                route_info.append(
-                    '\u00A0\u00A0#{1} | {0} ({3}) | {2}\u00A0\u00A0'.format(
+
+                route_stops[uid_thread] = {
+                    'route': '\u00A0\u00A0#{1} | {0} ({3}) | {2}\u00A0\u00A0'.format(
                         departure_format_date,
                         number_route,
                         short_title_route,
                         duration,
-                    )
-                )
-                route_detail_info.append(
-                    uid_thread,
-                )
-                route_stops[uid_thread] = stops
-                route_duration[uid_thread] = duration
-                route_arrival[uid_thread] = arrival_format_date
-        return (
-            route_info,
-            route_detail_info,
-            route_stops,
-            route_duration,
-            route_arrival,
-        )
+                    ),
+                    'stops': stops,
+                    'duration': duration,
+                    'arrival': arrival_format_date,
+                    'from': from_station,
+                    'to': to_station,
+                    'number': number_route,
+                    'departure': departure_format_date,
+                    'short_title_route': short_title_route,
+                    'days': days,
+                }
+                count_results += 1
+                if count_results >= 7:
+                    break
+        return route_stops
 
     def detail_thread(self) -> str:
         number = self.parser.parse_json(self.json_data, 'number')
-        short_title = self.parser.parse_json(self.json_data, 'short_title')
+        short_title = self.parser.parse_json(
+            self.json_data,
+            'short_title_route',
+        )
         days = self.parser.parse_json(self.json_data, 'days')
         from_station = self.parser.parse_json(self.json_data, 'from')
         to_station = self.parser.parse_json(self.json_data, 'to')
@@ -111,29 +111,21 @@ class Processing:
             from_station,
             'transport_type',
         )
-        uid_thread = self.parser.parse_json(self.json_data, 'uid')
-        route_stops = self.route_stops.get(uid_thread, 'Нет информации!')
+        route_stops = self.parser.parse_json(self.json_data, 'stops')
         if not route_stops and transport_type == 'bus':
             route_stops = (
                 'Автобусы и маршрутки обычно останавливаются на всех остановках'
             )
-        duration = self.route_duration.get(uid_thread, 'Нет информации!')
-        arrival = self.route_arrival.get(uid_thread, 'Нет информации!')
-        from_title = self.parser.parse_json(from_station, 'title')
+        duration = self.parser.parse_json(self.json_data, 'duration')
+        arrival = self.parser.parse_json(self.json_data, 'arrival')
         to_title = self.parser.parse_json(to_station, 'title')
-        stops = self.parser.parse_json(self.json_data, 'stops')
-        stop_departure = ''
-        for stop in stops:
-            stop_station = self.parser.parse_json(stop, 'station')
-            stop_station_title = self.parser.parse_json(stop_station, 'title')
-            if from_title == stop_station_title:
-                stop_departure = self.parser.parse_json(stop, 'departure')
+        stop_departure = self.parser.parse_json(self.json_data, 'departure')
         transport_type_name = 'Электричка'
         if transport_type == 'bus':
             transport_type_name = 'Автобус'
         return f'''<strong>{transport_type_name}:</strong> {number} {short_title}
 <strong>График движения:</strong> {days}
-<strong>Время отправления:</strong> {stop_departure[11:]}
+<strong>Время отправления:</strong> {stop_departure}
 <strong>С остановками:</strong> {route_stops}
 <strong>Время в пути составит:</strong> {duration}
 <strong>На конечный пункт {to_title} прибывает в:</strong> {arrival}
