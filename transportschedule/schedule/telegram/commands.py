@@ -106,7 +106,8 @@ async def handler_request_transport(
         for key, value in json_route.items():
             if key == call.data:
                 sent_message = await bot.send_message(
-                    call.message.chat.id, value.get('text', None)
+                    call.message.chat.id,
+                    value.get('text', None),
                 )
                 send_message.append(sent_message)
 
@@ -118,10 +119,7 @@ async def handler_request_transport(
                 json_stations = await request_data.request_transport_between_stations()
                 return json_stations.json()
     except Exception as error:
-        sent_message = await bot.send_message(
-            call.message.chat.id,
-            error,
-        )
+        sent_message = await bot.send_message(call.message.chat.id, error)
         send_message.append(sent_message)
         return None
 
@@ -165,17 +163,24 @@ async def callback_handler_bus_route(call: types.CallbackQuery) -> None:
     global route_stops
     global route_duration
     global route_arrival
-    await bot.delete_message(call.message.chat.id, call.message.id)
-    json_data = await handler_request_transport(call)
-    process = Processing(json_data)
-    (
-        route_info,
-        route_detail_info,
-        route_stops,
-        route_duration,
-        route_arrival,
-    ) = process.detail_transport()
-    await selected_route(call.message, route_info[:7], route_detail_info[:7])
+    try:
+        await bot.delete_message(call.message.chat.id, call.message.id)
+        json_data = await handler_request_transport(call)
+        process = Processing(json_data)
+        (
+            route_info,
+            route_detail_info,
+            route_stops,
+            route_duration,
+            route_arrival,
+        ) = process.detail_transport()
+        await selected_route(
+            call.message,
+            route_info[:7],
+            route_detail_info[:7],
+        )
+    except Exception as e:
+        await bot.send_message(call.message.chat.id, e)
 
 
 @bot.callback_query_handler(
