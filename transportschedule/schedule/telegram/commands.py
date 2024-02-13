@@ -5,8 +5,6 @@ from typing import Any, Dict
 
 from icecream import ic
 from telebot import types
-
-from transportschedule.schedule.encode import encode_string, check_login
 from transportschedule.schedule.process.processing import Processing
 from transportschedule.schedule.request.request import RequestSchedule
 from transportschedule.schedule.telegram.config import bot
