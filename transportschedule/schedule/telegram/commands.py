@@ -2,6 +2,8 @@ import json
 import os
 import re
 from typing import Any, Dict
+
+from icecream import ic
 from telebot import types
 from transportschedule.schedule.process.processing import Processing
 from transportschedule.schedule.request.request import RequestSchedule
@@ -118,10 +120,11 @@ async def handler_request_transport(
         return None
 
 
-async def handler_thread(thread: dict) -> str:
-    for key, value in thread.items():
-        process_thread = Processing(value)
-        return process_thread.detail_thread()
+async def handler_thread(thread, route_stops: dict) -> str:
+    for key, value in route_stops.items():
+        if key == thread[7:]:
+            process_thread = Processing(value)
+            return process_thread.detail_thread()
 
 
 @bot.callback_query_handler(
@@ -131,7 +134,7 @@ async def callback_handler_bus_route(call: types.CallbackQuery) -> None:
     try:
         global route_stops
         if call.data.startswith('thread'):
-            threads = await handler_thread(route_stops)
+            threads = await handler_thread(call.data, route_stops)
             await back_main(call.message, threads)
         else:
             await bot.delete_message(call.message.chat.id, call.message.id)
