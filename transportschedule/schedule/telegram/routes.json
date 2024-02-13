@@ -118,5 +118,11 @@
         "text": "Выбран маршрут: От Каланчёвская до Чёрное",
         "from_station": 2001005,
         "to_station": 9601301
+    },
+    "serp_molot_olgino": {
+        "transport_types": "suburban",
+        "text": "Выбран маршрут: От Серп и Молот до Ольгино",
+        "from_station": 9601796,
+        "to_station": 9881697
     }
 }

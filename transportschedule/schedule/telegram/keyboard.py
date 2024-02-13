@@ -164,6 +164,10 @@ async def selected_suburban(message: types.Message) -> None:
         '\u00A0\u00A0Каланчёвская - Чёрное\u00A0\u00A0',
         callback_data='kalanchevskaya_black',
     )
+    serp_molot_olgino = InlineKeyboardButton(
+        '\u00A0\u00A0Серп и Молот - Ольгино\u00A0\u00A0',
+        callback_data='serp_molot_olgino',
+    )
     keyboard.row(
         yaroslavsky_railway_station_sergiev_posad,
         sergiev_posad_yaroslavsky_railway_station,
@@ -179,6 +183,7 @@ async def selected_suburban(message: types.Message) -> None:
         black_serp_molot,
         serp_molot_black,
         kalanchevskaya_black,
+        serp_molot_olgino,
     )
     keyboard.add(
         InlineKeyboardButton(
