@@ -5,6 +5,8 @@ from typing import Any, Dict
 
 from icecream import ic
 from telebot import types
+
+from transportschedule.schedule.encode import encode_string, check_login
 from transportschedule.schedule.process.processing import Processing
 from transportschedule.schedule.request.request import RequestSchedule
 from transportschedule.schedule.telegram.config import bot
@@ -19,7 +21,7 @@ from transportschedule.schedule.telegram.keyboard import (
     back_from_routes,
 )
 
-route_stops = None
+route_stops = {}
 
 
 @bot.message_handler(content_types=['location'])
@@ -37,6 +39,9 @@ async def handle_location(message: types.Message):
 
 @bot.message_handler(commands=['select'])  # type: ignore
 async def handler_command_request(message: types.Message) -> None:
+    salt, result = encode_string(message.from_user.username)
+    result_check = check_login(salt, message.from_user.username)
+    ic(result[16:] == result_check)
     await select_transport_type(message)
 
 
@@ -120,7 +125,7 @@ async def handler_request_transport(
         return None
 
 
-async def handler_thread(thread, route_stops: dict) -> str:
+async def handler_thread(thread) -> str:
     for key, value in route_stops.items():
         if key == thread[7:]:
             process_thread = Processing(value)
@@ -134,7 +139,7 @@ async def callback_handler_bus_route(call: types.CallbackQuery) -> None:
     try:
         global route_stops
         if call.data.startswith('thread'):
-            threads = await handler_thread(call.data, route_stops)
+            threads = await handler_thread(call.data)
             await back_main(call.message, threads)
         else:
             await bot.delete_message(call.message.chat.id, call.message.id)
