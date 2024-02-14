@@ -142,7 +142,7 @@ async def callback_handler_bus_route(call: types.CallbackQuery) -> None:
         global result_route_stops
         global selected_route_username
         if call.data.startswith('thread'):
-            threads = await handler_thread(call.data, result_route_stops)
+            threads = await handler_thread(call.data)
             selected_route_username[call.data[7:]] = result_route_stops[call.data[7:]]
             await back_main(call.message, threads)
         elif call.data.startswith('schedule_'):
