@@ -10,5 +10,7 @@ class UserRoute(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     username: Mapped[str] = mapped_column(String(40))
     thread: Mapped[str] = mapped_column(String(40))
+    number: Mapped[str] = mapped_column(String(10))
     from_station: Mapped[str] = mapped_column(String(10))
     to_station: Mapped[str] = mapped_column(String(10))
+    salt: Mapped[str] = mapped_column(String(100))
