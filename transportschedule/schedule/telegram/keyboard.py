@@ -203,40 +203,43 @@ async def selected_suburban(message: types.Message) -> None:
 
 async def selected_route(message: types.Message, route_info: dict) -> None:
     keyboard = InlineKeyboardMarkup()
-    if route_info:
-        for key, value in route_info.items():
-            callback_data = 'thread_' + key
-            keyboard.row(
+    try:
+        if route_info:
+            for key, value in route_info.items():
+                callback_data = 'thread_' + key
+                keyboard.row(
+                    InlineKeyboardButton(
+                        text=f'\u00A0\u00A0\u00A0{value.get("route", None)}\u00A0\u00A0\u00A0',
+                        callback_data=callback_data,
+                    )
+                )
+            keyboard.add(
                 InlineKeyboardButton(
-                    text=f'\u00A0\u00A0\u00A0{value.get("route", None)}\u00A0\u00A0\u00A0',
-                    callback_data=callback_data,
+                    text='Вернуться в начало',
+                    callback_data='back',
                 )
             )
-        keyboard.add(
-            InlineKeyboardButton(
-                text='Вернуться в начало',
-                callback_data='back',
+            sent_message = await bot.send_message(
+                message.chat.id,
+                'Маршруты:',
+                reply_markup=keyboard,
             )
-        )
-        sent_message = await bot.send_message(
-            message.chat.id,
-            'Маршруты:',
-            reply_markup=keyboard,
-        )
-        send_message.append(sent_message)
-    else:
-        keyboard.add(
-            InlineKeyboardButton(
-                text='Вернуться в начало',
-                callback_data='back',
+            send_message.append(sent_message)
+        else:
+            keyboard.add(
+                InlineKeyboardButton(
+                    text='Вернуться в начало',
+                    callback_data='back',
+                )
             )
-        )
-        sent_message = await bot.send_message(
-            message.chat.id,
-            'На сегодня нет маршрутов...',
-            reply_markup=keyboard,
-        )
-        send_message.append(sent_message)
+            sent_message = await bot.send_message(
+                message.chat.id,
+                'На сегодня нет маршрутов...',
+                reply_markup=keyboard,
+            )
+            send_message.append(sent_message)
+    except Exception as error:
+        await bot.send_message(message.chat.id, f'Error keyboard: {error}')
 
 
 async def back_main(message: types.Message, threads: str) -> None:
