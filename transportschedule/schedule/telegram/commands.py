@@ -4,8 +4,11 @@ import re
 from typing import Any, Dict
 
 from icecream import ic
+from sqlalchemy.orm import Session
 from telebot import types
 
+from transportschedule.schedule.database.connect import engine
+from transportschedule.schedule.database.tables import UserRoute
 from transportschedule.schedule.encode import encode_string, check_login
 from transportschedule.schedule.process.processing import Processing
 from transportschedule.schedule.request.request import RequestSchedule
@@ -123,13 +126,13 @@ async def handler_request_transport(
         return None
 
 
-class UserRoute:
+class HandleUserRoute:
     result_route_stops: dict = {}
     selected_route_username: dict = {}
 
 
 async def handler_thread(thread) -> str:
-    for key, value in UserRoute.result_route_stops.items():
+    for key, value in HandleUserRoute.result_route_stops.items():
         if key == thread[7:]:
             process_thread = Processing(value)
             return process_thread.detail_thread()
@@ -142,19 +145,32 @@ async def callback_handler_bus_route(call: types.CallbackQuery) -> None:
     try:
         if call.data.startswith('thread'):
             threads = await handler_thread(call.data)
-            UserRoute.selected_route_username[call.data[7:]] = (
-                UserRoute.result_route_stops[call.data[7:]]
+            HandleUserRoute.selected_route_username[call.data[7:]] = (
+                HandleUserRoute.result_route_stops[call.data[7:]]
             )
             await back_main(call.message, threads)
         elif call.data.startswith('schedule_'):
-            ic(UserRoute.selected_route_username)
+            select_route = HandleUserRoute.selected_route_username
+            salt, login = encode_string(call.from_user.username)
+            with Session(engine) as session:
+                for key, value in select_route.items():
+                    result_route = UserRoute(
+                        username=login,
+                        salt=salt,
+                        thread=key,
+                        number=value.get('number', None),
+                        from_station=value.get('from').get('code'),
+                        to_station=value.get('to').get('code'),
+                    )
+                    session.add(result_route)
+                    session.commit()
         else:
             await bot.delete_message(call.message.chat.id, call.message.id)
             json_data = await handler_request_transport(call)
             process = Processing(json_data)
             route_stops = await process.detail_transport()
             await selected_route(call.message, route_stops)
-            UserRoute.result_route_stops = route_stops
+            HandleUserRoute.result_route_stops = route_stops
     except Exception as e:
         await bot.send_message(call.message.chat.id, f'Error: {e}')
 
