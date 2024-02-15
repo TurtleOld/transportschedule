@@ -123,15 +123,16 @@ async def handler_request_transport(
         return None
 
 
+class UserRoute:
+    result_route_stops: dict = {}
+    selected_route_username: dict = {}
+
+
 async def handler_thread(thread) -> str:
-    for key, value in result_route_stops.items():
+    for key, value in UserRoute.result_route_stops.items():
         if key == thread[7:]:
             process_thread = Processing(value)
             return process_thread.detail_thread()
-
-
-result_route_stops = {}
-selected_route_username = {}
 
 
 @bot.callback_query_handler(
@@ -139,21 +140,21 @@ selected_route_username = {}
 )  # type: ignore
 async def callback_handler_bus_route(call: types.CallbackQuery) -> None:
     try:
-        global result_route_stops
-        global selected_route_username
         if call.data.startswith('thread'):
             threads = await handler_thread(call.data)
-            selected_route_username[call.data[7:]] = result_route_stops[call.data[7:]]
+            UserRoute.selected_route_username[call.data[7:]] = (
+                UserRoute.result_route_stops[call.data[7:]]
+            )
             await back_main(call.message, threads)
         elif call.data.startswith('schedule_'):
-            ic(selected_route_username)
+            ic(UserRoute.selected_route_username)
         else:
             await bot.delete_message(call.message.chat.id, call.message.id)
             json_data = await handler_request_transport(call)
             process = Processing(json_data)
             route_stops = await process.detail_transport()
             await selected_route(call.message, route_stops)
-            result_route_stops = route_stops
+            UserRoute.result_route_stops = route_stops
     except Exception as e:
         await bot.send_message(call.message.chat.id, f'Error: {e}')
 
