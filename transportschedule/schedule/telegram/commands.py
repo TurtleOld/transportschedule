@@ -7,7 +7,7 @@ from icecream import ic
 from sqlalchemy.orm import Session
 from telebot import types
 
-from transportschedule.schedule.database.connect import engine
+from transportschedule.schedule.database.connect import engine, async_session
 from transportschedule.schedule.database.tables import UserRoute
 from transportschedule.schedule.encode import encode_string, check_login
 from transportschedule.schedule.process.processing import Processing
@@ -152,7 +152,7 @@ async def callback_handler_bus_route(call: types.CallbackQuery) -> None:
         elif call.data.startswith('schedule_'):
             select_route = HandleUserRoute.selected_route_username
             salt, login = encode_string(call.from_user.username)
-            with Session(engine) as session:
+            async with async_session() as session:
                 for key, value in select_route.items():
                     result_route = UserRoute(
                         username=login,
@@ -162,8 +162,8 @@ async def callback_handler_bus_route(call: types.CallbackQuery) -> None:
                         from_station=value.get('from').get('code'),
                         to_station=value.get('to').get('code'),
                     )
-                    session.add(result_route)
-                    session.commit()
+                    await session.add(result_route)
+                    await session.commit()
         else:
             await bot.delete_message(call.message.chat.id, call.message.id)
             json_data = await handler_request_transport(call)

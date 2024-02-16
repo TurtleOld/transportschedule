@@ -1,17 +1,25 @@
 import os
-from pathlib import Path
-from icecream import ic
-from sqlalchemy import create_engine
+from sqlalchemy.ext.asyncio import create_async_engine, AsyncAttrs, AsyncSession
 from sqlalchemy.orm import DeclarativeBase
+from dotenv import load_dotenv
+
+load_dotenv()
+
+DATABASE_USER = os.getenv('DATABASE_USER')
+DATABASE_PASSWORD = os.getenv('DATABASE_PASSWORD')
+DATABASE_SERVER = os.getenv('DATABASE_SERVER')
+DATABASE_PORT = os.getenv('DATABASE_PORT')
+DATABASE_NAME = os.getenv('DATABASE_NAME')
 
 
-current_directory = Path(__file__).resolve().parent.parent.parent.parent
-file_name = 'transportschedule.db'
-file_path = os.path.abspath(os.path.join(current_directory, file_name))
-ic(file_path)
+database_url = f'postgresql+asyncpg:///{DATABASE_USER}:{DATABASE_PASSWORD}@{DATABASE_SERVER}:{DATABASE_PORT}/{DATABASE_NAME}'
 
-engine = create_engine(f'sqlite+pysqlite:///{file_path}', echo=True)
+engine = create_async_engine(
+    database_url,
+    echo=True,
+)
+async_session = AsyncSession(engine, expire_on_commit=False)
 
 
-class Base(DeclarativeBase):
+class Base(AsyncAttrs, DeclarativeBase):
     __abstract__ = True
