@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "dokku": {
+      "predeploy": "alembic upgrade head"
+    }
+  },
+  "healthchecks": {
+    "worker": [
+      {
+        "attempts": 3,
+        "timeout": 20,
+        "wait": 10
+      }
+    ]
+  }
+}
