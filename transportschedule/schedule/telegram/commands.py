@@ -4,10 +4,10 @@ import re
 from typing import Any, Dict
 
 from icecream import ic
-from sqlalchemy.orm import Session
+from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
 from telebot import types
 
-from transportschedule.schedule.database.connect import engine, async_session
+from transportschedule.schedule.database.connect import DATABASE_URL
 from transportschedule.schedule.database.tables import UserRoute
 from transportschedule.schedule.encode import encode_string, check_login
 from transportschedule.schedule.process.processing import Processing
@@ -23,6 +23,14 @@ from transportschedule.schedule.telegram.keyboard import (
     keyboard_station,
     back_from_routes,
 )
+
+
+async def create_database_session():
+    """Create database session."""
+    engine = create_async_engine(DATABASE_URL)
+    async_session = async_sessionmaker(engine, expire_on_commit=False)
+    async with async_session() as session:
+        return session
 
 
 @bot.message_handler(content_types=['location'])
@@ -152,7 +160,7 @@ async def callback_handler_bus_route(call: types.CallbackQuery) -> None:
         elif call.data.startswith('schedule_'):
             select_route = HandleUserRoute.selected_route_username
             salt, login = encode_string(call.from_user.username)
-            async with async_session() as session:
+            async with await create_database_session() as session:
                 for key, value in select_route.items():
                     result_route = UserRoute(
                         username=login,
@@ -162,7 +170,7 @@ async def callback_handler_bus_route(call: types.CallbackQuery) -> None:
                         from_station=value.get('from').get('code'),
                         to_station=value.get('to').get('code'),
                     )
-                    await session.add(result_route)
+                    session.add(result_route)
                     await session.commit()
         else:
             await bot.delete_message(call.message.chat.id, call.message.id)

@@ -1,5 +1,7 @@
 import asyncio
 from logging.config import fileConfig
+
+from icecream import ic
 from sqlalchemy.engine import Connection
 from sqlalchemy.ext.asyncio import create_async_engine
 
@@ -65,7 +67,6 @@ async def run_async_migrations() -> None:
 
     """
     connectable = create_async_engine(DATABASE_URL)
-
     async with connectable.connect() as connection:
         await connection.run_sync(do_run_migrations)
 

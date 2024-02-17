@@ -12,13 +12,7 @@ DATABASE_PORT = os.getenv('DATABASE_PORT')
 DATABASE_NAME = os.getenv('DATABASE_NAME')
 
 
-DATABASE_URL = f'postgresql+asyncpg:///{DATABASE_USER}:{DATABASE_PASSWORD}@{DATABASE_SERVER}:{DATABASE_PORT}/{DATABASE_NAME}'
-
-engine = create_async_engine(
-    DATABASE_URL,
-    echo=True,
-)
-async_session = AsyncSession(engine, expire_on_commit=False)
+DATABASE_URL = f'postgresql+asyncpg://{DATABASE_USER}:{DATABASE_PASSWORD}@{DATABASE_SERVER}:{DATABASE_PORT}/{DATABASE_NAME}'
 
 
 class Base(AsyncAttrs, DeclarativeBase):
