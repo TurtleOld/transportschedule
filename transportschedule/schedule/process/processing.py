@@ -38,65 +38,68 @@ class Processing:
         current_time = timezone(utc_offset)
         current_datetime = datetime.now(current_time)
         count_results = 0
-        for segment in segments:
-            departure = self.parser.parse_json(segment, 'departure')
-            date_departure = datetime.strptime(
-                str(departure),
-                '%Y-%m-%dT%H:%M:%S%z',
-            )
-            if date_departure > current_datetime:
-                from_station = self.parser.parse_json(segment, 'from')
-                to_station = self.parser.parse_json(segment, 'to')
-                arrival = self.parser.parse_json(segment, 'arrival')
-                date_arrival = datetime.strptime(
-                    str(arrival),
+        if segments:
+            for segment in segments:
+                departure = self.parser.parse_json(segment, 'departure')
+                date_departure = datetime.strptime(
+                    str(departure),
                     '%Y-%m-%dT%H:%M:%S%z',
                 )
-                departure_format_date = date_departure.strftime('%H:%M')
-                arrival_format_date = date_arrival.strftime('%H:%M')
-                number_route = self.parser.parse_json(
-                    segment,
-                    'number',
-                )
-                thread_route = self.parser.parse_json(segment, 'thread')
-                duration = convert_time(
-                    self.parser.parse_json(segment, 'duration'),
-                )
-                short_title_route = self.parser.parse_json(
-                    thread_route,
-                    'short_title',
-                )
-                uid_thread = self.parser.parse_json(thread_route, 'uid')
-                request = RequestSchedule(
-                    uid=uid_thread,
-                    from_station=from_station.get('code', None),
-                    to_station=to_station.get('code', None),
-                )
-                threads = await request.request_thread_transport_route()
-                days = self.parser.parse_json(threads.json(), 'days')
-                stops = self.parser.parse_json(segment, 'stops')
+                if date_departure > current_datetime:
+                    from_station = self.parser.parse_json(segment, 'from')
+                    to_station = self.parser.parse_json(segment, 'to')
+                    arrival = self.parser.parse_json(segment, 'arrival')
+                    date_arrival = datetime.strptime(
+                        str(arrival),
+                        '%Y-%m-%dT%H:%M:%S%z',
+                    )
+                    departure_format_date = date_departure.strftime('%H:%M')
+                    arrival_format_date = date_arrival.strftime('%H:%M')
+                    number_route = self.parser.parse_json(
+                        segment,
+                        'number',
+                    )
+                    thread_route = self.parser.parse_json(segment, 'thread')
+                    duration = convert_time(
+                        self.parser.parse_json(segment, 'duration'),
+                    )
+                    short_title_route = self.parser.parse_json(
+                        thread_route,
+                        'short_title',
+                    )
+                    uid_thread = self.parser.parse_json(thread_route, 'uid')
+                    request = RequestSchedule(
+                        uid=uid_thread,
+                        from_station=from_station.get('code', None),
+                        to_station=to_station.get('code', None),
+                    )
+                    threads = await request.request_thread_transport_route()
+                    days = self.parser.parse_json(threads.json(), 'days')
+                    stops = self.parser.parse_json(segment, 'stops')
 
-                route_stops[uid_thread] = {
-                    'route': '\u00A0\u00A0#{1} | {0} ({3}) | {2}\u00A0\u00A0'.format(
-                        departure_format_date,
-                        number_route,
-                        short_title_route,
-                        duration,
-                    ),
-                    'stops': stops,
-                    'duration': duration,
-                    'arrival': arrival_format_date,
-                    'from': from_station,
-                    'to': to_station,
-                    'number': number_route,
-                    'departure': departure_format_date,
-                    'short_title_route': short_title_route,
-                    'days': days,
-                }
-                count_results += 1
-                if count_results >= 7:
-                    break
-        return route_stops
+                    route_stops[uid_thread] = {
+                        'route': '\u00A0\u00A0#{1} | {0} ({3}) | {2}\u00A0\u00A0'.format(
+                            departure_format_date,
+                            number_route,
+                            short_title_route,
+                            duration,
+                        ),
+                        'stops': stops,
+                        'duration': duration,
+                        'arrival': arrival_format_date,
+                        'from': from_station,
+                        'to': to_station,
+                        'number': number_route,
+                        'departure': departure_format_date,
+                        'short_title_route': short_title_route,
+                        'days': days,
+                    }
+                    count_results += 1
+                    if count_results >= 7:
+                        break
+            return route_stops
+        else:
+            return {}
 
     def detail_thread(self) -> str:
         number = self.parser.parse_json(self.json_data, 'number')

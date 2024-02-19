@@ -58,49 +58,60 @@ async def handler_command_request(message: types.Message) -> None:
     func=lambda call: re.match(r's\d+', call.data),
 )  # type: ignore
 async def handle_stations(call: types.CallbackQuery) -> None:
-    transport_route = ''
-    station_response = RequestSchedule(current_station=call.data)
-    result_station_response = await station_response.request_flight_schedule_station()
-    process_station_response = Processing(result_station_response.json())
-    result = process_station_response.flight_schedule_station()
-    for key, value in result.items():
-        departure_format_time = value.get('departure_format_time')
-        number = value.get('number')
-        short_title = value.get('short_title')
-        stops = value.get('stops')
-        transport_route += f'''
-        
+    try:
+        transport_route = ''
+        station_response = RequestSchedule(current_station=call.data)
+        result_station_response = (
+            await station_response.request_flight_schedule_station()
+        )
+        process_station_response = Processing(result_station_response.json())
+        result = process_station_response.flight_schedule_station()
+        for key, value in result.items():
+            departure_format_time = value.get('departure_format_time')
+            number = value.get('number')
+            short_title = value.get('short_title')
+            stops = value.get('stops')
+            transport_route += f'''
+            
 {departure_format_time}
 {number} {short_title}
 С остановками {stops}'''
 
-    await back_from_routes(call.message, transport_route)
+        await back_from_routes(call.message, transport_route)
+    except Exception as error:
+        await bot.send_message(call.message.chat.id, error)
 
 
 @bot.callback_query_handler(
     func=lambda call: call.data == 'bus',
 )  # type: ignore
 async def callback_handler_bus(call: types.CallbackQuery) -> None:
-    await bot.delete_message(call.message.chat.id, call.message.id)
-    sent_message = await bot.send_message(
-        call.message.chat.id,
-        'Выбран вид транспорта: Автобус',
-    )
-    send_message.append(sent_message)
-    await selected_bus(call.message)
+    try:
+        await bot.delete_message(call.message.chat.id, call.message.id)
+        sent_message = await bot.send_message(
+            call.message.chat.id,
+            'Выбран вид транспорта: Автобус',
+        )
+        send_message.append(sent_message)
+        await selected_bus(call.message)
+    except Exception as error:
+        await bot.send_message(call.message.chat.id, error)
 
 
 @bot.callback_query_handler(
     func=lambda call: call.data == 'suburban',
 )  # type: ignore
 async def callback_handler_suburban(call: types.CallbackQuery) -> None:
-    await bot.delete_message(call.message.chat.id, call.message.id)
-    sent_message = await bot.send_message(
-        call.message.chat.id,
-        'Выбран вид транспорта: Электричка',
-    )
-    send_message.append(sent_message)
-    await selected_suburban(call.message)
+    try:
+        await bot.delete_message(call.message.chat.id, call.message.id)
+        sent_message = await bot.send_message(
+            call.message.chat.id,
+            'Выбран вид транспорта: Электричка',
+        )
+        send_message.append(sent_message)
+        await selected_suburban(call.message)
+    except Exception as error:
+        await bot.send_message(call.message.chat.id, error)
 
 
 async def handler_request_transport(
@@ -177,6 +188,8 @@ async def callback_handler_bus_route(call: types.CallbackQuery) -> None:
             json_data = await handler_request_transport(call)
             process = Processing(json_data)
             route_stops = await process.detail_transport()
+            if not route_stops:
+                raise KeyError('Яндекс не передал данные по маршрутам!')
             await selected_route(call.message, route_stops)
             HandleUserRoute.result_route_stops = route_stops
     except Exception as e:
